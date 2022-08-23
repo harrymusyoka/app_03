@@ -4,6 +4,8 @@ import os
 import sys
 
 
+gunicorn -b 127.0.0.1:8001 app_03.wsgi:application
+
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'app_03.settings')
