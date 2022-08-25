@@ -85,9 +85,6 @@ TEMPLATES = [
     },
 ]
 
-TEMPLATE_DIRS = (
-    PROJECT_PATH + '/templates/',
-)
 
 
 
