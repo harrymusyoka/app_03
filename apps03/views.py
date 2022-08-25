@@ -12,4 +12,6 @@ def login(request):
       a = "Hello"
       print(a)
 
-      return HttpResponse("Hello world!")
+      
+      template = loader.get_template('apps03/index.html')
+      return HttpResponse(template.render())
