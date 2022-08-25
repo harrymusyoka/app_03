@@ -85,6 +85,13 @@ TEMPLATES = [
     },
 ]
 
+TEMPLATE_DIRS = (
+    PROJECT_PATH + '/templates/',
+)
+
+
+
+
 WSGI_APPLICATION = 'app_03.wsgi.application'
 
 
