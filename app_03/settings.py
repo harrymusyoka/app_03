@@ -55,8 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'django.contrib.seimport dj_database_url
-ssions',
+    'django.contrib.seimport dj_database_url',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps03',
