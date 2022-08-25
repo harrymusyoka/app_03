@@ -13,5 +13,5 @@ def login(request):
       print(a)
 
       
-      template = loader.get_template('apps03/index.html')
+      template = loader.get_template('index.html')
       return HttpResponse(template.render())
