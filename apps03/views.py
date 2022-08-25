@@ -11,4 +11,5 @@ from django.contrib import messages
 def login(request):
       a = "Hello"
       print(a)
-      HttpResponse('apps03/index.html')
+
+      return HttpResponse("Hello world!")
