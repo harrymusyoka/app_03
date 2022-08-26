@@ -1,0 +1,22 @@
+<h1> <span style="color:blue;font-weight:bold"> Rooming List</span> </h1>
+<table class="content" border="2px">
+  <thead>
+  <tr>
+    <th>id</th>
+    <th>Name</th>
+    <th>tenant</th>
+    <th>occupants</th>
+     </tr></thead>
+  <tbody>
+    {% for row in rental_units %}
+  <tr align="center">    
+    <td>{{row.id}}</td>
+    <td>{{ row.name }}</td>
+    <td>{{ row.tenant }}</td>
+    <td>{{ row.occupants }}</td>
+    <td>{{ row.quantity }}</td>
+       <td><input type="submit" value="Accept">  <input type="button" value="Reject"></td>
+  </tr>
+  {% endfor %}
+</tbody> 
+</table>

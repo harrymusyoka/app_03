@@ -1,0 +1,194 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+
+<div class="btn-group">
+  <button class="btn">Home</button>
+  <button class="btn dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+  <li class="nav-item active">
+                        </li>
+                <li class="nav-item active">
+                 <a class="navbar-brand"  ><i class="fas fa-person-booth">Contacts</i></a>
+                </li>
+       
+                <li class="nav-item active">
+                <a class="nav-link"  >System Issues<span class="sr-only">(current)</span></a>
+               </li>
+            
+               <li class="nav-item active">
+                <a class="nav-link"  >Emergency<span class="sr-only">(current)</span></a>
+               </li>
+             
+  </ul>
+</div>
+
+<div class="btn-group">
+  <button class="btn">Admin</button>
+  <button class="btn dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+               <li class="nav-item active">
+                 <a class="nav-link"  href={% url 'add_accomcat' %}><i class="fas fa-person-booth">AccomCategory</i></a>
+                </li>
+                <li class="nav-item active">
+                 <a class="navbar-brand"   href={% url 'add_roomcat' %}     ><i class="fas fa-person-booth">Rooms Category</i></a>
+                </li>
+       
+                <li class="nav-item active">
+                <a class="nav-link"  >UnitCategory<span class="sr-only">(current)</span></a>
+               </li>
+            
+               <li class="nav-item active">
+                <a class="nav-link"  >System Admin<span class="sr-only">(current)</span></a>
+               </li>
+             
+  </ul>
+</div>
+
+
+<div class="btn-group">
+#  <button class="btn">Rental Units</button>
+  <button class="btn dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+  <li class="nav-item active">
+              <a class="nav-link" href={% url 'add_rentalunit' %} >New Renta Unit<span class="sr-only"(current)</span></a>
+         
+    </li>
+                <li class="nav-item active">
+                 <a class="navbar-brand"  ><i class="fas fa-person-booth">Edit Units</i></a>
+                </li>
+       
+                <li class="nav-item active">
+                <a class="nav-link"  >Delete Unit<span class="sr-only">(current)</span></a>
+               </li>
+            
+               <li class="nav-item active">
+                <a class="nav-link" href={% url 'dashboard' %} >Print Unit<span class="sr-only">(current)</span></a>
+               </li>
+             
+  </ul>
+</div>
+
+<div class="btn-group">
+  <button class="btn">Guests</button>
+  <button class="btn dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+  <li class="nav-item active">
+    <a class="nav-link" href={% url 'add_guest' %} >New Guest<span class="sr-only"(current)</span></a>
+     </li>
+                <li class="nav-item active">
+                 <a class="navbar-brand"  ><i class="fas fa-person-booth">Edit Guest</i></a>
+                </li>
+       
+                <li class="nav-item active">
+                <a class="nav-link"  >Delete Guest<span class="sr-only">(current)</span></a>
+               </li>
+            
+               <li class="nav-item active">
+                <a class="nav-link" href=  {% url 'viewpro' %}     >Print Guest<span class="sr-only">(current)</span></a>
+               </li>
+             
+  </ul>
+</div>
+
+<div class="btn-group">
+  <button class="btn">Operations</button>
+  <button class="btn dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+  <li class="nav-item active">
+        
+               </li>
+                <li class="nav-item active">
+                 <a class="navbar-brand"  ><i class="fas fa-person-booth">CheckIns</i></a>
+                </li>
+       
+                <li class="nav-item active">
+                <a class="nav-link"  >CheckOuts<span class="sr-only">(current)</span></a>
+               </li>
+            
+               <li class="nav-item active">
+                <a class="nav-link"  >Tenancy Agreements<span class="sr-only">(current)</span></a>
+               </li>
+             
+  </ul>
+</div>
+
+
+<div class="btn-group">
+  <button class="btn">Accounts</button>
+  <button class="btn dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+  <li class="nav-item active">
+              
+ </li>
+                <li class="nav-item active">
+                 <a class="navbar-brand"  ><i class="fas fa-person-booth">Banks</i></a>
+                </li>
+       
+                <li class="nav-item active">
+                <a class="nav-link"  >Invoicing<span class="sr-only">(current)</span></a>
+               </li>
+            
+               <li class="nav-item active">
+                <a class="nav-link"  >Statements<span class="sr-only">(current)</span></a>
+               </li>
+             
+  </ul>
+</div>
+
+<div class="btn-group">
+  <button class="btn">Staff</button>
+  <button class="btn dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+  <li class="nav-item active">
+                          </li>
+                <li class="nav-item active">
+                 <a class="navbar-brand"  ><i class="fas fa-person-booth">Edit Employee</i></a>
+                </li>
+       
+                <li class="nav-item active">
+                <a class="nav-link"  >Delete Employee<span class="sr-only">(current)</span></a>
+               </li>
+            
+               <li class="nav-item active">
+                <a class="nav-link"  >Staff ID Card<span class="sr-only">(current)</span></a>
+               </li>
+             
+  </ul>
+</div>
+
+<div class="btn-group">
+  <button class="btn">Cash Book</button>
+  <button class="btn dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+  <li class="nav-item active">
+                    </li>
+                <li class="nav-item active">
+                 <a class="navbar-brand"  ><i class="fas fa-person-booth">Receipts</i></a>
+                </li>
+       
+                <li class="nav-item active">
+                <a class="nav-link"  >Bankings<span class="sr-only">(current)</span></a>
+               </li>
+            
+               <li class="nav-item active">
+                <a class="nav-link"  >Vouchers<span class="sr-only">(current)</span></a>
+               </li>
+             
+  </ul>
+</div>
+</nav>

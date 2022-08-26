@@ -1,0 +1,37 @@
+{% extends 'apaccom0/base.html' %}
+
+{% block content %}
+function runScript() {
+    $.ajax({
+        url: 'process1' //The URL you defined in urls.py
+     //   success: function(data) {
+          //If you wish you can do additional data manipulation here.
+        }
+
+    });
+}
+
+<div class="container">
+    <div class="row center">
+        <div class="col-md-6 offset-md-3">
+            <p>Already have an account? <a href="{% url 'apaccom0:polls_list' %}">Login Here</a></p>
+            {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                <div {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            <form action={% url 'apaccom0:polls_list' %} method="GET">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Sign Up(home)</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

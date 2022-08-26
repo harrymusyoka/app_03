@@ -1,0 +1,13 @@
+<h2>Rental Units</h2> {# TODO: i18n #}
+<p>{% st %} </p>
+<ul>
+	{% for sts in st %}
+	<li>
+		<a href="/apacomm0/{{ sts.id }}/">
+			{{ sts.name }}
+		</a>
+	</li>
+	{% endfor %}
+
+
+</ul>

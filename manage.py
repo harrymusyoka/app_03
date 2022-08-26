@@ -18,7 +18,7 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
-
+    #gunicorn -b 127.0.0.1:8001 app_03.wsgi:application
 
 if __name__ == '__main__':
     main()
