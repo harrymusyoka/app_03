@@ -10,7 +10,7 @@ from apps03.models import accompacks,rentalunit,DueReceipt,Receipt,room_category
 from .forms import rentalunitForm,GuestForm, accom_categoryForm
 from .forms import accompacksForm,DueReceiptForm,ReceiptForm
 from .forms import room_categoryForm
-import win32api
+
 
 def login(request):
       a = "Hello"
@@ -22,7 +22,7 @@ def login(request):
       
       
 def login1(request):
-    win32api.MessageBox(0, 'hello', 'harry')
+   
     if request.method == 'POST':
         form = rentalunitForm(request.POST)
         if form.is_valid():
