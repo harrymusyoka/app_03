@@ -5,10 +5,12 @@ from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
 from django.contrib import messages
+from apps03.models import Guest, accomodation_category, accompacks,rentalunit,DueReceipt,Receipt,room_category
+from .forms import rentalunitForm,GuestForm, accom_categoryForm, accompacksForm,DueReceiptForm,ReceiptForm
+from .forms import room_categoryForm
 
 
-
-def login(request):
+def login0(request):
       a = "Hello"
       print(a)
 
@@ -17,7 +19,7 @@ def login(request):
       return HttpResponse(template.render())
       
       
-def login0(request):
+def login(request):
     if request.method == 'POST':
         form = rentalunitForm(request.POST)
         if form.is_valid():
