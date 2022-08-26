@@ -13,8 +13,12 @@ from apps03.forms import rentalunitForm
 class login(UpdateView):
       model = rentalunit
       form_class = rentalunitForm
-      template_name = 'apps03/main-menu.html'
+      template_name = 'apps03/index2.html'
 
+class login3(UpdateView):
+      model = rentalunit
+      form_class = rentalunitForm
+      template_name = 'apps03/main-menu.html'
 
 def   login0(request):
       a = "Hello"
