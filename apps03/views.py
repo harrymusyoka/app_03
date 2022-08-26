@@ -13,10 +13,10 @@ def login(request):
             print('valid')
     else:
         form = rentalunitForm()
-    return render(request,  'apaccom0/main-menu.html', {'form': form})
+    return render(request,  'apps03/main-menu.html', {'form': form})
 
 def polls_list(request):
-      HttpResponse('apaccom0/poll_list.html')
+      HttpResponse('apps03/poll_list.html')
 
 
 
@@ -26,7 +26,7 @@ def dashboard(request):
     count= rentalunit.objects.all().count()
     print(count)
    # return render(request,'display.html',{'st':st})
-    return render (request,'apaccom0/viewpro.html', {
+    return render (request,'apps03/viewpro.html', {
         'rental_units': st
     })
 
@@ -38,7 +38,7 @@ def task_create(request):
             print('valid')
     else:
         form = RentalUnitForm()
-    return render(request,  'apaccom0/add_poll.html', {'form': form})
+    return render(request,  'apps03/add_poll.html', {'form': form})
  
 def add_guest(request):
      if request.method == 'POST':
@@ -47,7 +47,7 @@ def add_guest(request):
             print('valid')
      else:
             form = GuestForm()
-     return render(request,  'apaccom0/add_guest.html', {'form': form})
+     return render(request,  'apps03/add_guest.html', {'form': form})
 
 def add_roomcat(request):
      if request.method == 'POST':
@@ -56,7 +56,7 @@ def add_roomcat(request):
             print('valid')
      else:
             form = room_categoryForm()
-     return render(request, 'apaccom0/add_roomcat.html',{'form': form})
+     return render(request, 'apps03/add_roomcat.html',{'form': form})
 
 
 def add_accomcat(request):
@@ -66,7 +66,7 @@ def add_accomcat(request):
             print('valid')
      else:
             form = accom_categoryForm()
-     return render(request, 'apaccom0/add_accomcat.html',{'form': form})
+     return render(request, 'apps03/add_accomcat.html',{'form': form})
 
 def roomcatsv(request):
       if request.method=='POST':
@@ -77,7 +77,7 @@ def roomcatsv(request):
          roomcat.save()
          messages.success(request,'Data has been submitted')
          form = room_categoryForm()
-         return render(request, 'apaccom0/add_roomcat.html',{'form': form})
+         return render(request, 'apps03/add_roomcat.html',{'form': form})
 
 
 def commcatsv(request):
@@ -89,7 +89,7 @@ def commcatsv(request):
          comcat.save()
          messages.success(request,'Data has been submitted')
          form = accom_categoryForm()
-         return render(request, 'apaccom0/add_accomcat.html',{'form': form})
+         return render(request, 'apps03/add_accomcat.html',{'form': form})
 
 
 def add_rentalunit(request):
@@ -99,7 +99,7 @@ def add_rentalunit(request):
             print('valid')
      else:
             form = rentalunitForm()
-     return render(request, 'apaccom0/add_rentalunit.html',{'form': form})
+     return render(request, 'apps03/add_rentalunit.html',{'form': form})
 
 
 
@@ -114,7 +114,7 @@ def rentalunitpr(request):
         rental.save()
         messages.success(request,'Data has been submitted')
         form = rentalunitForm()
-    return render(request,  'apaccom0/add_rentalunit.html', {'form': form})
+    return render(request,  'apps03/add_rentalunit.html', {'form': form})
 
 def addguest(request):
     if request.method=='POST':
@@ -129,7 +129,7 @@ def addguest(request):
         guest.save()
         messages.success(request,'Data has been submitted')
         form = GuestForm()
-    return render(request,  'apaccom0/add_guest.html', {'form': form})
+    return render(request,  'apps03/add_guest.html', {'form': form})
 
 def viewpro(request):
    # con = mysql.connector.connect(user='root', password='mysql2016', host='localhost', database='dbaccom0')
@@ -141,4 +141,4 @@ def viewpro(request):
     cur.close()
     con.close()
     #context = {'viewpro' : user_order.objects.all()}
-    return render(request, "apaccom0/viewpro.html", {'records':records})
+    return render(request, "apps03/viewpro.html", {'records':records})
