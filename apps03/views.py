@@ -1,4 +1,4 @@
-fromfrom apaccom0.models import Guest, accomodation_category, accompacks,rentalunit,DueReceipt,Receipt,room_category
+fromfrom apps03.models import Guest, accomodation_category, accompacks,rentalunit,DueReceipt,Receipt,room_category
 from django.shortcuts import render
 from .forms import rentalunitForm,GuestForm, accom_categoryForm, accompacksForm,DueReceiptForm,ReceiptForm
 from .forms import room_categoryForm
