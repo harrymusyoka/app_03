@@ -68,6 +68,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'app_03.urls'
+TEMPLATE_DIRS = (
+    BASE_DIR + '/templates/',
+)
 
 TEMPLATES = [
     {
