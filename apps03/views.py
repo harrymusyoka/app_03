@@ -7,7 +7,7 @@ from django.contrib import messages
 
 
 
-ef login(request):
+def login(request):
       a = "Hello"
       print(a)
 
