@@ -5,11 +5,6 @@ from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
 from django.contrib import messages
-from apps03.models import Guest, accomodation_category
-from apps03.models import accompacks,rentalunit,DueReceipt,Receipt,room_category
-from .forms import rentalunitForm,GuestForm, accom_categoryForm
-from .forms import accompacksForm,DueReceiptForm,ReceiptForm
-from .forms import room_categoryForm
 
 
 def   login(request):
