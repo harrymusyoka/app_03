@@ -5,14 +5,23 @@ from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
 from django.contrib import messages
-from .forms import rentalunitForm
+ 
 from django.views.generic import UpdateView
-from apps03.models import rentalunit
-from apps03.forms import rentalunitForm
+from django.views.generic import CreateView
+ 
+from apps03.forms import PersonForm
 
-class login(UpdateView):
-      model = rentalunit
-      form_class = rentalunitForm
+
+from .models import Person
+
+class PersonCreateView(CreateView):
+    model = Person
+    fields = ('name', 'email', 'job_title', 'bio')
+
+
+class PersonUpdateView(UpdateView):
+      model = Person
+      form_class = PersonForm
       template_name = 'apps03/index2.html'
 
 class login3(UpdateView):
