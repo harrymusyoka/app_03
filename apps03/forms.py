@@ -7,7 +7,7 @@ class rentalunitForm(forms.ModelForm):
     error_css_class='error-field'
 
     class Meta:
-        model = rentalunitforms
+        model = rentalunit
         fields = ['roomno', 'roomdesc', 'roomtype', 'rate']
 
         widgets = {
