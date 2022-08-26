@@ -12,7 +12,7 @@ from .forms import accompacksForm,DueReceiptForm,ReceiptForm
 from .forms import room_categoryForm
 import win32api
 
-def login0(request):
+def login(request):
       a = "Hello"
       print(a)
 
@@ -21,7 +21,7 @@ def login0(request):
       return HttpResponse(template.render())
       
       
-def login(request):
+def login1(request):
     win32api.MessageBox(0, 'hello', 'harry')
     if request.method == 'POST':
         form = rentalunitForm(request.POST)
