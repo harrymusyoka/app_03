@@ -6,8 +6,17 @@ from django.template import loader
 from django.http import HttpResponse
 from django.contrib import messages
 from .forms import rentalunitForm
+from django.views.generic import UpdateView
+from apps03.models import rentalunit
+from apps03.forms import rentalunitForm
 
-def   login(request):
+class login(UpdateView):
+      model = rentalunit
+      form_class = rentalunitForm
+      template_name = 'apps03/main-menu.html'
+
+
+def   login0(request):
       a = "Hello"
       print(a)
 
