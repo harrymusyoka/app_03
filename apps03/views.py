@@ -6,7 +6,16 @@ from django.http import HttpResponse
 from django.contrib import messages
 
 
-def login(request):
+
+ef login(request):
+      a = "Hello"
+      print(a)
+
+      
+      template = loader.get_template('apps03/index.html')
+      return HttpResponse(template.render())
+
+def login0(request):
     if request.method == 'POST':
         form = rentalunitForm(request.POST)
         if form.is_valid():
