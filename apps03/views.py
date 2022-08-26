@@ -12,7 +12,7 @@ from .forms import accompacksForm,DueReceiptForm,ReceiptForm
 from .forms import room_categoryForm
 
 
-def login(request):
+def   login(request):
       a = "Hello"
       print(a)
 
