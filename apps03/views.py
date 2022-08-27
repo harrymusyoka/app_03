@@ -29,3 +29,10 @@ def login1(request):
     else:
         form = rentalunitForm()
     return render(request,  'apps03/main-menu.html', {'form': form})
+    
+    
+    
+def add_accomcat(request):
+       template = loader.get_template('apps03/main-menu.html')
+       return HttpResponse(template.render())
+
