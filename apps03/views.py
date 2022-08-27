@@ -9,10 +9,6 @@ from django.contrib import messages
 from django.views.generic import UpdateView
 from django.views.generic import CreateView
  
-from apps03.forms import PersonForm
-
-
-from .models import Person
 
 class PersonCreateView(CreateView):
     model = Person
@@ -29,7 +25,7 @@ class login3(UpdateView):
       form_class = rentalunitForm
       template_name = 'apps03/main-menu.html'
 
-def   login0(request):
+def   login(request):
       a = "Hello"
       print(a)
 
