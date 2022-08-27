@@ -102,13 +102,17 @@ WSGI_APPLICATION = 'app_03.wsgi.application'
 DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
 
-    DATABASES = {
-            "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-        }
-    }
 
+DATABASES = {
+    'default': {
+        'ENGINE'  : 'django.db.backends.mysql', # <-- UPDATED line 
+        'NAME'    : 'dbaccom0',                 # <-- UPDATED line 
+        'USER'    : 'root',                     # <-- UPDATED line
+        'PASSWORD': 'mysql2016',              # <-- UPDATED line
+        'HOST'    : 'localhost',                # <-- UPDATED line
+        'PORT'    : '3306',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
