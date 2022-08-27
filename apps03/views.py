@@ -10,7 +10,7 @@ from django.views.generic import UpdateView
 from django.views.generic import CreateView
  
 from apps03.forms import PersonForm
-
+import sys
 
 from .models import Person
 
