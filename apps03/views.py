@@ -41,6 +41,7 @@ def add_accomcat(request):
        return HttpResponse(template.render())
 
 class Person(models.Model):
+      name = models.CharField(max_length=130)
   
 
 def polls_list(request):
