@@ -8,8 +8,8 @@ from django.contrib import messages
  
 from django.views.generic import UpdateView
 from django.views.generic import CreateView
-from .forms import NameForm
 
+from .forms import NameForm
 
 def   login(request):
       a = "Hello"
