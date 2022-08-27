@@ -6,6 +6,13 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
 
 
+
+class NameForm(forms.Form):
+    your_name = forms.CharField(label='Your name', max_length=100)
+
+
+
+
 class PersonForm(forms.ModelForm):
     class Meta:
         model = Person
