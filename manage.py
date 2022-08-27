@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
-import os
 import sys
+import os
+
+from sys import argv
 
 
 #gunicorn -b 127.0.0.1:8001 app_03.wsgi:application
