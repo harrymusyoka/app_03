@@ -5,10 +5,19 @@ from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
 from django.contrib import messages
- 
+ from django.db import models
 from django.views.generic import UpdateView
 from django.views.generic import CreateView
-from apps03.models import Client
+ 
+
+
+
+class Person(models.Model):
+    name = models.CharField(max_length=130)
+    email = models.EmailField(blank=True)
+    job_title = models.CharField(max_length=30, blank=True)
+    bio = models.TextField(blank=True)
+
 
 
 def   login(request):
