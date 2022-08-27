@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
 from django.contrib import messages
- from django.db import models
+from django.db import models
 from django.views.generic import UpdateView
 from django.views.generic import CreateView
  
