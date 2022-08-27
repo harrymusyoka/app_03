@@ -10,20 +10,6 @@ from django.views.generic import UpdateView
 from django.views.generic import CreateView
  
 
-class PersonCreateView(CreateView):
-    model = Person
-    fields = ('name', 'email', 'job_title', 'bio')
-
-
-class PersonUpdateView(UpdateView):
-      model = Person
-      form_class = PersonForm
-      template_name = 'apps03/index2.html'
-
-class login3(UpdateView):
-      model = rentalunit
-      form_class = rentalunitForm
-      template_name = 'apps03/main-menu.html'
 
 def   login(request):
       a = "Hello"
