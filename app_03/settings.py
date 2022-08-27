@@ -15,7 +15,7 @@ from pathlib import Path
 from django.contrib.messages import constants as messages
 import os
 import sys
-
+import dj_database_url
 
 MESSAGE_TAGS = {
     messages.DEBUG: 'alert-info',
