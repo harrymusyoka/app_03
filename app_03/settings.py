@@ -16,6 +16,11 @@ from django.contrib.messages import constants as messages
 import os
 import sys
 import dj_database_url
+import pymysql
+pymysql.install_as_MySQLdb()
+
+
+
 
 MESSAGE_TAGS = {
     messages.DEBUG: 'alert-info',
