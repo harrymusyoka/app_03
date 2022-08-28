@@ -36,12 +36,7 @@ def login1(request):
     
     
     
-def add_accomcat(request):
-       template = loader.get_template('apps03/main-menu.html')
-       return HttpResponse(template.render())
 
-class Person(models.Model):
-      name = models.CharField(max_length=130)
   
 
 def polls_list(request):
