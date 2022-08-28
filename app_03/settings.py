@@ -16,7 +16,6 @@ from django.contrib.messages import constants as messages
 import os
 import sys
 import dj_database_url
-import flask
 import MySQLdb
 
 
