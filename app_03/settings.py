@@ -16,10 +16,8 @@ from django.contrib.messages import constants as messages
 import os
 import sys
 import dj_database_url
-import pymysql
-pymysql.install_as_MySQLdb()
-
-
+import flask
+import MySQLdb
 
 
 MESSAGE_TAGS = {
