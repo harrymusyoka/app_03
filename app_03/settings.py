@@ -113,8 +113,7 @@ DATABASES = {
         'NAME'    : 'defaultdb',                 # <-- UPDATED line 
         'USER'    : 'doadmin',                     # <-- UPDATED line
         'PASSWORD': 'AVNS_opSyNyIDAt49SbpzqG_',              # <-- UPDATED line
-        'HOST'    : 'db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com
-',                # <-- UPDATED line
+        'HOST'    : 'db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com',                # <-- UPDATED line
         'PORT'    : '25060',
     }
 }
