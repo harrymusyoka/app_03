@@ -16,7 +16,7 @@ from django.contrib.messages import constants as messages
 import os
 import sys
 import dj_database_url
-import MySQLdb
+
 import pymysql
 pymysql.install_as_MySQLdb()
 
