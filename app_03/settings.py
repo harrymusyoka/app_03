@@ -30,8 +30,6 @@ MESSAGE_TAGS = {
 }
 
 
-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
-
 
 # Build paths inside th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e project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
