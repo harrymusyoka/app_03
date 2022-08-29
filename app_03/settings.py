@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoprimport dj_database_url
 oject.com/en/4.1/ref/settings/
 """
-
+from configurations import Configuration
 from pathlib import Path
 from django.contrib.messages import constants as messages
 import os
