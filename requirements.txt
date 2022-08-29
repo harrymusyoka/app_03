@@ -10,5 +10,5 @@ PyMySQL==1.0.2
 sqlparse==0.4.2
 MySQL-python
 python-3.8.10
-configparser-5.3.0
+
 

@@ -29,7 +29,7 @@ MESSAGE_TAGS = {
 }
 
 
-
+ModuleNotFoundError: No module named 'ConfigParser
 
 
 
@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ConfigParse', 
     'app_03',
 ]
 
