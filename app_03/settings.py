@@ -11,13 +11,13 @@ https://docs.djangoprimport dj_database_url
 oject.com/en/4.1/ref/settings/
 """
 
-from configurations import Configuration
+
 from pathlib import Path
 from django.contrib.messages import constants as messages
 import os
 import sys
 import dj_database_url
-
+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
 import pymysql
 pymysql.install_as_MySQLdb()
 
