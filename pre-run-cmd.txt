@@ -1,0 +1,5 @@
+python runserver makemigrations
+python runserver migrate
+sudo service gunicorn restart
+sudo service nginx restart
+
