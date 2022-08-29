@@ -30,7 +30,6 @@ MESSAGE_TAGS = {
 }
 
 
-ModuleNotFoundError: No module named 'ConfigParser
 
 
 
