@@ -32,16 +32,7 @@ def login1(request):
     return render(request,  'apps03/main-menu.html', {'form': form})
     
     
- #polls_list   
-
-  
-
-def add_rentalunit(request):
-      template = loader.get_template('apps03/main-menu.html')
-      return HttpResponse(template.render())
-
-
-
+ 
 def dashboard(request):
       template = loader.get_template('apps03/main-menu.html')
       return HttpResponse(template.render())
