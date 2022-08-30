@@ -68,7 +68,7 @@ class Client(models.Model):
     acno = models.IntegerField()
     client_name = models.CharField(max_length=40)
     address = models.CharField(max_length=150)
-    phone_number = PhoneNumberField()
+    phone_number = models.CharField(max_length=40)
     email =  models.EmailField(max_length=70,blank=True,unique=True)
 
 class Transactons(models.Model):
@@ -94,7 +94,7 @@ class Guest(models.Model):
     Guest_name = models.CharField(max_length=50)
     IDNo = models.CharField(max_length=12)
     address = models.CharField(max_length=150)
-    phone_number = PhoneNumberField()
+    phone_number = models.CharField(max_length=40)
     guestnumb = models.IntegerField()
 
     BirthYear = DateField()
