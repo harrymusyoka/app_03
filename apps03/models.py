@@ -4,8 +4,6 @@ from django.utils import timezone
 import secrets
 from django.db.models import (Model, ForeignKey, PositiveSmallIntegerField,
         DecimalField, CharField, TextField, DateField, DateTimeField)
-from phonenumber_field.modelfields import PhoneNumberField
-
 
 
 
