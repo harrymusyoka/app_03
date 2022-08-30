@@ -1,7 +1,7 @@
 from django import forms
 from .models import  Guest, accomodation_category, accompacks,accomodation_category,rentalunit,DueReceipt,Receipt,room_category
 
-from apps03.models import Person
+
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
 
