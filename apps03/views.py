@@ -23,7 +23,7 @@ def ru_list(request):
      st = rentalunit.objects.all() # Collect all records from table 
      count= rentalunit.objects.all().count()
      print(count)
-     return render(request,'display.html',{'st':st})
+  
      return render (request,'apps03/rentalunitslist.html', {
         'rental_units': st
     })
