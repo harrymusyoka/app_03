@@ -20,9 +20,15 @@ def polls_list(request):
       HttpResponse('apps03/poll_list.html')
 
 def ru_list(request):
-      template = loader.get_template('apps03/rep01.html')
-      return HttpResponse(template.render())
-      
+     st = rentalunit.objects.all() # Collect all records from table 
+     count= rentalunit.objects.all().count()
+     print(count)
+     return render(request,'display.html',{'st':st})
+     return render (request,'apps03/rentalunitslist.html', {
+        'rental_units': st
+    })
+
+
       
  
 def dashboard(request):
