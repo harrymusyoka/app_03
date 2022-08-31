@@ -5,7 +5,7 @@ from django.contrib import messages
 
 from .forms import rentalunitForm
 
-
+from .models import rentalunit
 
 
 def   login(request):
