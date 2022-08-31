@@ -27,8 +27,8 @@ urlpatterns = [
     path('roomcatsv/', views.roomcatsv, name='roomcatsv'), 
 
 
-    path('apaccom0/add_rentalunit/', views.add_rentalunit, name='add_rentalunit'),
-    path('aapps03/add_guest/',views.add_guest, name='add_guest'),
+    path('apps03/add_rentalunit/', views.add_rentalunit, name='add_rentalunit'),
+    path('apps03/add_guest/',views.add_guest, name='add_guest'),
     path('addguest/',views.addguest, name='addguest'),
 
        ]

@@ -78,6 +78,18 @@ def viewpro(request):
      return HttpResponse(template.render())
 
 
+def rentalunitpr(request):
+    if request.method=='POST':
+        roomno0=request.POST['roomno']
+        roomdesc0=request.POST['roomdesc']
+        roomtype0=request.POST['roomtype']
+        rate0=request.POST['rate']
+        rental=rentalunit.objects.create(roomno=roomno0,roomdesc=roomdesc0,roomtype=roomtype0, rate= rate0)
+       
+        rental.save()
+        messages.success(request,'Data has been submitted')
+        form = rentalunitForm()
+    return render(request,  'apaccom0/add_rentalunit.html', {'form': form})
 
 
 
