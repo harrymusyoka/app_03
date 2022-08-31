@@ -19,6 +19,8 @@ def   login(request):
 def polls_list(request):
       HttpResponse('apps03/poll_list.html')
 
+def ru_list(request):
+       HttpResponse('apps03/rentalunitslist.html')
  
 def dashboard(request):
       template = loader.get_template('apps03/main-menu.html')

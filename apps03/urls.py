@@ -10,7 +10,7 @@ urlpatterns = [
     path('apps03/login/', views.login, name='login'),
     path('apps03/add_accomcat/', views.add_accomcat, name='add_accomcat'),
     
-    
+    path('apps03/ru_list/', views.ru_list, name='ru_list'),
 
     path('dashboard/', views.dashboard, name='dashboard'),
     path('rentalunitpr/', views.rentalunitpr, name='rentalunitpr'),
