@@ -60,7 +60,7 @@ def add_rentalunit(request):
             print('valid')
      else:
             form = rentalunitForm()
-     return render(request, 'apaccom0/add_rentalunit.html',{'form': form})
+     return render(request, 'apps03/add_rentalunit.html',{'form': form})
 
 
 
