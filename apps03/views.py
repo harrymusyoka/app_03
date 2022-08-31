@@ -20,7 +20,7 @@ def polls_list(request):
       HttpResponse('apps03/poll_list.html')
 
 def ru_list(request):
-      template = loader.get_template('apps03/repo01.html')
+      template = loader.get_template('apps03/rep01.html')
       return HttpResponse(template.render())
       
       
