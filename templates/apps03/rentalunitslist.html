@@ -69,7 +69,7 @@
 
                     <li class="page-item active"><a class="page-link" href="">{{ RentalUni.number }}</a></li>
 
-                    {% if polls.has_next %}
+                    {% if RentalUni.has_next %}
                     <li class="page-item"><a class="page-link" href="?page={{ polls.next_page_number }}&{{ params }}">Next</a></li>
                     <li class="page-item"><a class="page-link" href="?page={{ polls.paginator.num_pages }}&{{ params }}">Last</a></li>
                     {% endif %}
@@ -79,8 +79,7 @@
     </div>
 </div>
 
-{% endblock content %}pha-down"></i>
-                Name</a>
+
             <a class="btn btn-{% if 'date' in request.GET %}warning{% else %}primary{% endif %} mb-3" href="?date=True"
                 role="button"><i class="far fa-clock"></i> Date</a>
             <a class="btn btn-{% if 'vote' in request.GET %}warning{% else %}primary{% endif %} mb-3" href="?vote=True"
