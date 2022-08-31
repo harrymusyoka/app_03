@@ -25,7 +25,7 @@
             <a class="btn btn-{% if 'vote' in request.GET %}warning{% else %}primary{% endif %} mb-3" href="?vote=True"
                 role="button"><i class="fas fa-poll"></i> Tenant</a>
 
-            <a class="btn btn-primary mb-3 float-right" href="{% url 'apaccom0:task_create' %}" role="button">Add <i class="fas fa-plus"></i></a>
+            <a class="btn btn-primary mb-3 float-right" href="{% url 'apps03:task_create' %}" role="button">Add <i class="fas fa-plus"></i></a>
 
             <form class="form-inline">
                 <div class="form-group mr-sm-2 mb-2">
@@ -44,14 +44,14 @@
                 <ul class="pagination">
                     {% if Ru.has_previous %}
                     <li class="page-item"><a class="page-link" href="?page=1&{{ params }}">First</a></li>
-                    <li class="page-item"><a class="page-link" href="?page={{ polls.previous_page_number }}&{{ params }}">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ rental_units.previous_page_number }}&{{ params }}">Previous</a></li>
                     {% endif %}
 
                     <li class="page-item active"><a class="page-link" href="">{{ Ru.roomno }}</a></li>
 
                     {% if tu.has_next %}
-                    <li class="page-item"><a class="page-link" href="?page={{ polls.next_page_number }}&{{ params }}">Next</a></li>
-                    <li class="page-item"><a class="page-link" href="?page={{ polls.paginator.num_pages }}&{{ params }}">Last</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ rental_units.next_page_number }}&{{ params }}">Next</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ rental_units.paginator.num_pages }}&{{ params }}">Last</a></li>
                     {% endif %}
                 </ul>
             </nav>
