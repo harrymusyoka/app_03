@@ -52,9 +52,16 @@ def commcatsv(request):
        return HttpResponse(template.render())
 
 
+
 def add_rentalunit(request):
-       template = loader.get_template('apps03/main-menu.html')
-       return HttpResponse(template.render())
+     if request.method == 'POST':
+        form = rentalunitForm(request.POST)
+        if form.is_valid():
+            print('valid')
+     else:
+            form = rentalunitForm()
+     return render(request, 'apaccom0/add_rentalunit.html',{'form': form})
+
 
 
 
