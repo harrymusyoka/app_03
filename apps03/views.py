@@ -89,7 +89,7 @@ def rentalunitpr(request):
         rental.save()
         messages.success(request,'Data has been submitted')
         form = rentalunitForm()
-    return render(request,  'apaccom0/add_rentalunit.html', {'form': form})
+    return render(request,  'apps03/add_rentalunit.html', {'form': form})
 
 
 
