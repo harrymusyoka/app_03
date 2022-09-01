@@ -56,7 +56,7 @@ stauschoice=(
  )
 
 
-mn_CHOICES = (
+rmn_CHOICES = (
     ("01", "01"),
     ("02", "02"),
     ("03", "03"),
@@ -104,8 +104,7 @@ class CommonInfo(Model):
 
 class rentalunit(models.Model):
      id = models.AutoField()
-     roomno = CharField( primary_key=True,  
-             choices=rmn_CHOICES)
+     roomno = CharField( primary_key=True, choices=rmn_CHOICES)
                     
     
      roomdesc = CharField(max_length=20)
