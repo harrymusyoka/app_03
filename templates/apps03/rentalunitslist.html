@@ -41,12 +41,18 @@
                 <button type="submit" class="btn btn-primary mb-2"><i class="fas fa-search"></i></button>
             </form>
 
-
+ 
+            {% spaceless %}
             <ul class="list-group">
                 {% for Ru in rental_units %}
-                <p>{{Ru.roomno}} {{Ru.roomdesc}}   {{Ru.roomtype }}    {{Ru.rate }}  </p> 
+                 <li>{{Ru.roomno}} </li>
+                 <li>{{Ru.roomdesc}}</li> 
+                 <li>{{Ru.roomtype }}</li>  
+                 <li>{{Ru.rate }} </li>
                 {% endfor %}
             </ul>
+            
+            {% endspaceless %}
             <nav class="mt-3">
                 <ul class="pagination">
                     {% if Ru.has_previous %}
