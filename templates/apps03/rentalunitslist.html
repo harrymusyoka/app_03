@@ -22,11 +22,18 @@
                 Unit-No</a>
             <a class="btn btn-{% if 'date' in request.GET %}warning{% else %}primary{% endif %} mb-3" href="?date=True"
                 role="button"><i class="far fa-clock"></i> Description</a>
+                
+              <a class="btn btn-{% if 'date' in request.GET %}warning{% else %}primary{% endif %} mb-3" href="?date=True"
+                role="button"><i class="far fa-clock"></i>Unit-Type</a>
+          
+                
+                
+                
+                
             <a class="btn btn-{% if 'vote' in request.GET %}warning{% else %}primary{% endif %} mb-3" href="?vote=True"
                 role="button"><i class="fas fa-poll"></i>Rate</a>
 
-            <a class="btn btn-primary mb-3 float-right" href="{% url 'task_create' %}" role="button">Add-Bew-Ubit<i class="fas fa-plus"></i></a>
- 
+        
             <form class="form-inline">
                 <div class="form-group mr-sm-2 mb-2">
                     <input type="search" class="form-control" name="search" placeholder="Search" value={{ search_term }}>
@@ -54,6 +61,10 @@
                     <li class="page-item"><a class="page-link" href="?page={{ rental_units.paginator.num_pages }}&{{ params }}">Last</a></li>
                     {% endif %}
                 </ul>
+                
+                     <a class="btn btn-primary mb-3 float-right" href="{% url 'task_create' %}" role="button">Add-Bew-Ubit<i class="fas fa-plus"></i></a>
+
+                
             </nav>
         </div>
     </div>
