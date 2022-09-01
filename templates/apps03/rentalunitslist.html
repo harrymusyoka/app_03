@@ -43,14 +43,29 @@
 
  
             {% spaceless %}
+            <table border="1">
+            <COLGROUP>
+            <COL width="100"><COL width="100">
+                  
+            
+            
+            
+            
+            
+            
             <ul class="list-group">
                 {% for Ru in rental_units %}
-                 <li>{{Ru.roomno}} </li>
-                 <li>{{Ru.roomdesc}}</li> 
-                 <li>{{Ru.roomtype }}</li>  
-                 <li>{{Ru.rate }} </li>
+                 <THEAD>
+                <tr>
+                    <td>{{Ru.roomno}}    </td>
+                    <td>{{Ru.roomdesc}}</td>
+                   <td>{{Ru.roomtype }}</td> 
+                  <td>{{Ru.rate }} </td>
+                  </tr>
                 {% endfor %}
-            </ul>
+                                           
+            </table></center>
+   
             
             {% endspaceless %}
             <nav class="mt-3">
