@@ -92,16 +92,7 @@ mn_CHOICES = (
     
 )
 
-class rentalunit(CommonInfo):
-    id = models.AutoField(primary_key=True)
-    roomno = CharField( primary_key=True,  
-             choices=rmn_CHOICES)
-                    
-    
-    roomdesc = CharField(max_length=20)
-    roomtype = CharField(choices=rmdeschoice)
-    rate =  DecimalField(max_digits=9, decimal_places=2, default = 0)
-
+c
 
 class CommonInfo(Model):
     created = DateTimeField("creation date", auto_now_add=True)
@@ -110,6 +101,20 @@ class CommonInfo(Model):
 
     class Meta:
         abstract = True
+
+
+class rentalunit(models.Model):
+     id = models.AutoField()
+     roomno = CharField( primary_key=True,  
+             choices=rmn_CHOICES)
+                    
+    
+     roomdesc = CharField(max_length=20)
+     roomtype = CharField(choices=rmdeschoice)
+     rate =  DecimalField(max_digits=9, decimal_places=2, default = 0)
+
+
+
 
 class Client(models.Model):
     acno = models.IntegerField()
