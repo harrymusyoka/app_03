@@ -92,7 +92,6 @@ mn_CHOICES = (
     
 )
 
-c
 
 class CommonInfo(Model):
     created = DateTimeField("creation date", auto_now_add=True)
