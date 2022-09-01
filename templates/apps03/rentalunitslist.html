@@ -77,13 +77,13 @@
 
                     <li class="page-item active"><a class="page-link" href="">{{ Ru.roomno }}</a></li>
 
-                    {% if tu.has_next %}
+                    {% if Ru.has_next %}
                     <li class="page-item"><a class="page-link" href="?page={{ rental_units.next_page_number }}&{{ params }}">Next</a></li>
                     <li class="page-item"><a class="page-link" href="?page={{ rental_units.paginator.num_pages }}&{{ params }}">Last</a></li>
                     {% endif %}
                 </ul>
                 
-                     <a class="btn btn-primary mb-3 float-right" href="{% url 'add_rentaluni' %}" role="button">Add-Bew-Ubit<i class="fas fa-plus"></i></a>
+                     <a class="btn btn-primary mb-3 float-right" href="{% url 'add_rentaluni' %}" role="button">Add-New-Unit<i class="fas fa-plus"></i></a>
 
                 
             </nav>
