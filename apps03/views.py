@@ -87,13 +87,12 @@ def viewpro(request):
 
 def rentalunitpr(request):
     if request.method=='POST':
-        count= rentalunit.objects.all().count()
-        count=count+1
+ 
         roomno0=request.POST['roomno']
         roomdesc0=request.POST['roomdesc']
         roomtype0=request.POST['roomtype']
         rate0=request.POST['rate']
-        rental=rentalunit.objects.create(roomno=roomno0,roomdesc=roomdesc0,roomtype=roomtype0, rate= rate0, id=count)
+        rental=rentalunit.objects.create(roomno=roomno0,roomdesc=roomdesc0,roomtype=roomtype0, rate= rate0)
        
         rental.save()
         messages.success(request,'Data has been submitted')
