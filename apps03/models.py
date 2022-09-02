@@ -106,7 +106,7 @@ class rentalunit2(models.Model):
      
      roomno = CharField(max_length=2, choices=rmn_CHOICES)                    
      roomdesc = CharField(max_length=20)
-     roomtype = CharField(choices=rmdeschoice)
+     roomtype = CharField(max_length=3, choices=rmdeschoice)
      rate =  models.IntegerField(default = 0)
 
 
