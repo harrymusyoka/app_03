@@ -103,13 +103,13 @@ class CommonInfo(Model):
 
 
 class rentalunit(models.Model):
-     id = models.AutoField(primary_key=True)
+     id = models.IntegerField()
      roomno = CharField(choices=rmn_CHOICES)
                     
     
      roomdesc = CharField(max_length=20)
      roomtype = CharField(choices=rmdeschoice)
-     rate =  DecimalField(max_digits=9, decimal_places=2, default = 0)
+     rate =  models.IntegerField()
 
 
 

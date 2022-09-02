@@ -76,10 +76,6 @@ def add_rentalunit(request):
 
 
 
-def rentalunitpr(request):
-       template = loader.get_template('apps03/main-menu.html')
-       return HttpResponse(template.render())
-
 def addguest(request):
        template = loader.get_template('apps03/main-menu.html')
        return HttpResponse(template.render())
@@ -91,11 +87,13 @@ def viewpro(request):
 
 def rentalunitpr(request):
     if request.method=='POST':
+        count= rentalunit.objects.all().count()
+        
         roomno0=request.POST['roomno']
         roomdesc0=request.POST['roomdesc']
         roomtype0=request.POST['roomtype']
         rate0=request.POST['rate']
-        rental=rentalunit.objects.create(roomno=roomno0,roomdesc=roomdesc0,roomtype=roomtype0, rate= rate0)
+        rental=rentalunit.objects.create(roomno=roomno0,roomdesc=roomdesc0,roomtype=roomtype0, rate= rate0, id=count+1)
        
         rental.save()
         messages.success(request,'Data has been submitted')
