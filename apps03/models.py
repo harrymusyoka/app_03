@@ -103,8 +103,8 @@ class CommonInfo(Model):
 
 
 class rentalunit(models.Model):
-     id = models.AutoField()
-     roomno = CharField( primary_key=True, choices=rmn_CHOICES)
+     id = models.AutoField(primary_key=True)
+     roomno = CharField(choices=rmn_CHOICES)
                     
     
      roomdesc = CharField(max_length=20)
