@@ -104,12 +104,10 @@ class CommonInfo(Model):
 
 class rentalunit(models.Model):
      
-     roomno = CharField(choices=rmn_CHOICES)
-                    
-    
+     roomno = CharField(choices=rmn_CHOICES)                    
      roomdesc = CharField(max_length=20)
      roomtype = CharField(choices=rmdeschoice)
-     rate =  models.IntegerField()
+     rate =  models.IntegerField(default = 0)
 
 
 
