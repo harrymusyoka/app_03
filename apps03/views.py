@@ -20,6 +20,7 @@ def polls_list(request):
       HttpResponse('apps03/poll_list.html')
 
 def ru_list(request):
+     rentalunit.objects.all().delete()
      st = rentalunit.objects.all() # Collect all records from table 
      count= rentalunit.objects.all().count()
      print(count)
@@ -29,7 +30,6 @@ def ru_list(request):
     })
 
 
-      
  
 def dashboard(request):
       template = loader.get_template('apps03/main-menu.html')
