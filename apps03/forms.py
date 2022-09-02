@@ -1,5 +1,5 @@
 from django import forms
-from .models import  Guest, accomodation_category, accompacks,accomodation_category,rentalunit,DueReceipt,Receipt,room_category
+from .models import  Guest, accomodation_category, accompacks,accomodation_category,rentalunit2,DueReceipt,Receipt,room_category
 
 
 
