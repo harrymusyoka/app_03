@@ -20,7 +20,7 @@ def polls_list(request):
       HttpResponse('apps03/poll_list.html')
 
 def ru_list(request):
-     rentalunit2.objects.all().delete()
+     #rentalunit2.objects.all().delete()
      st = rentalunit2.objects.all() # Collect all records from table 
      count= rentalunit2.objects.all().count()
      print(count)
