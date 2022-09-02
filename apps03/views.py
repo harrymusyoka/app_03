@@ -5,7 +5,7 @@ from django.contrib import messages
 
 from .forms import rentalunitForm
 
-from .models import rentalunit2
+from .models import rentalunit
 
 
 def   login(request):
@@ -21,8 +21,8 @@ def polls_list(request):
 
 def ru_list(request):
      #rentalunit2.objects.all().delete()
-     st = rentalunit2.objects.all() # Collect all records from table 
-     count= rentalunit2.objects.all().count()
+     st = rentalunit.objects.all() # Collect all records from table 
+     count= rentalunit.objects.all().count()
      print(count)
   
      return render (request,'apps03/rentalunitslist.html', {
@@ -92,7 +92,7 @@ def rentalunitpr(request):
         roomdesc0=request.POST['roomdesc']
         roomtype0=request.POST['roomtype']
         rate0=request.POST['rate']
-        rental=rentalunit2.objects.create(roomno=roomno0,roomdesc=roomdesc0,roomtype=roomtype0, rate= rate0)
+        rental=rentalunit.objects.create(roomno=roomno0,roomdesc=roomdesc0,roomtype=roomtype0, rate= rate0)
        
         rental.save()
         messages.success(request,'Data has been submitted')
