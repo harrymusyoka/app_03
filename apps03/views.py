@@ -20,9 +20,9 @@ def polls_list(request):
       HttpResponse('apps03/poll_list.html')
 
 def ru_list(request):
-     rentalunit.objects.all().delete()
-     st = rentalunit.objects.all() # Collect all records from table 
-     count= rentalunit.objects.all().count()
+     rentalunit2.objects.all().delete()
+     st = rentalunit2.objects.all() # Collect all records from table 
+     count= rentalunit2.objects.all().count()
      print(count)
   
      return render (request,'apps03/rentalunitslist.html', {
