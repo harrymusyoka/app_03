@@ -5,7 +5,7 @@ from django.contrib import messages
 
 from .forms import rentalunitForm
 
-from .models import rentalunit
+from .models import rentalunit2
 
 
 def   login(request):
@@ -92,7 +92,7 @@ def rentalunitpr(request):
         roomdesc0=request.POST['roomdesc']
         roomtype0=request.POST['roomtype']
         rate0=request.POST['rate']
-        rental=rentalunit.objects.create(roomno=roomno0,roomdesc=roomdesc0,roomtype=roomtype0, rate= rate0)
+        rental=rentalunit2.objects.create(roomno=roomno0,roomdesc=roomdesc0,roomtype=roomtype0, rate= rate0)
        
         rental.save()
         messages.success(request,'Data has been submitted')

@@ -102,7 +102,7 @@ class CommonInfo(Model):
         abstract = True
 
 
-class rentalunit(models.Model):
+class rentalunit2(models.Model):
      
      roomno = CharField(choices=rmn_CHOICES)                    
      roomdesc = CharField(max_length=20)
