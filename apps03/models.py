@@ -82,7 +82,7 @@ rmn_CHOICES = (
     ("23", "23"),
     ("24", "24"),
     ("25", "25"),
-    ("26", "26"),
+    ("26", "26"),0
     ("27", "27"),
     ("28", "28"),
     ("29", "29"),
@@ -102,7 +102,7 @@ class CommonInfo(Model):
         abstract = True
 
 
-class rentalunit(models.Model):
+class rentalunit3(models.Model):
      
      roomno = CharField(max_length=2, choices=rmn_CHOICES)                    
      roomdesc = CharField(max_length=20)

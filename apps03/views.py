@@ -5,7 +5,7 @@ from django.contrib import messages
 
 from .forms import rentalunitForm
 
-from .models import rentalunit
+from .models import rentalunit3
 import mysql.connector
 
 def   login(request):
@@ -28,14 +28,14 @@ def   login(request):
       
       template = loader.get_template('apps03/main-menu.html')
       return HttpResponse(template.render())
-      
+      0
 def polls_list(request):
       HttpResponse('apps03/poll_list.html')
 
 def ru_list(request):
      #rentalunit2.objects.all().delete()
-     st = rentalunit.objects.all() # Collect all records from table 
-     count= rentalunit.objects.all().count()
+     st = rentalunit3.objects.all() # Collect all records from table 
+     count= rentalunit3.objects.all().count()
      print(count)
   
      return render (request,'apps03/rentalunitslist.html', {
@@ -79,11 +79,11 @@ def commcatsv(request):
 
 def add_rentalunit(request):
      if request.method == 'POST':
-        form = rentalunitForm(request.POST)
+        form = rentalunit3Form(request.POST)
         if form.is_valid():
             print('valid')
      else:
-            form = rentalunitForm()
+            form = rentalunit3Form()
      return render(request, 'apps03/add_rentalunit.html',{'form': form})
 
 
@@ -105,11 +105,11 @@ def rentalunitpr(request):
         roomdesc0=request.POST['roomdesc']
         roomtype0=request.POST['roomtype']
         rate0=request.POST['rate']
-        rental=rentalunit.objects.create(roomno=roomno0,roomdesc=roomdesc0,roomtype=roomtype0, rate= rate0)
+        rental=rentalunit3.objects.create(roomno=roomno0,roomdesc=roomdesc0,roomtype=roomtype0, rate= rate0)
        
         rental.save()
         messages.success(request,'Data has been submitted')
-        form = rentalunitForm()
+        form = rentalunit3Form()
     return render(request,  'apps03/add_rentalunit.html', {'form': form})
 
 
