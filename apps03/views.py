@@ -6,9 +6,22 @@ from django.contrib import messages
 from .forms import rentalunitForm
 
 from .models import rentalunit
-
+import mysql.connector
 
 def   login(request):
+
+
+      mydb = mysql.connector.connect(
+      host="db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com",
+      user="doadmin",
+      password="AVNS_opSyNyIDAt49SbpzqG_",
+      database="defaultdb")
+
+      mycursor = mydb.cursor()
+
+      sql = "DROP TABLE rentalunit"
+
+      mycursor.execute(sql) 
       a = "Hello"
       print(a)
 
