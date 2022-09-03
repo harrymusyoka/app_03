@@ -28,7 +28,7 @@ def   login(request):
       
       template = loader.get_template('apps03/main-menu.html')
       return HttpResponse(template.render())
-      0
+      
 def polls_list(request):
       HttpResponse('apps03/poll_list.html')
 
