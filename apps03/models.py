@@ -235,8 +235,4 @@ class accompacks(CommonInfo):
         Code =CharField(max_length=10)
         rate  =  DecimalField(max_digits=9, decimal_places=2, default = 0)
 
-class Receipt(CommonInfo):
-    date = DateField()
-    amount = DecimalField(max_digits=9, decimal_places=2,default=0)
-    rental_unit =CharField(max_length=10, default = '0')
-    guestnumb = models.IntegerField(default = 0)
+
