@@ -8,7 +8,7 @@ class rentalunitForm(forms.ModelForm):
 
     class Meta:
         model = rentalunit
-        fields = ['roomno', 'roomdesc', 'roomtype', 'rate']
+        fields = ['roomno', 'roomdesc', 'roomtype', 'rate', 'id']
 
         widgets = {
             'text': forms.Textarea(attrs={'class': 'form-control', 'rows': 5, 'cols': 20}),

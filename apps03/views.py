@@ -105,7 +105,8 @@ def rentalunitpr(request):
         roomdesc0=request.POST['roomdesc']
         roomtype0=request.POST['roomtype']
         rate0=request.POST['rate']
-        rental=rentalunit.objects.create(roomno=roomno0,roomdesc=roomdesc0,roomtype=roomtype0, rate= rate0)
+        id0=request.POST['id']
+        rental=rentalunit.objects.create(roomno=roomno0,roomdesc=roomdesc0,roomtype=roomtype0, rate= rate0, id =id0)
        
         rental.save()
         messages.success(request,'Data has been submitted')
