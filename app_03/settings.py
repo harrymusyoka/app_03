@@ -119,7 +119,7 @@ DATABASES = {
         'NAME'    : 'dbapps03',                 # <-- UPDATED line 
         'USER'    : 'root@droplet-01',                     # <-- UPDATED line
         'PASSWORD': '',              # <-- UPDATED line
-        'HOST'    : 'db-mysql-nyc3-16778-douser-11647348-0.b.db.ondigitalocean.com',                
+        'HOST'    : 'apps-03-3b3ea.ondigitalocean.app',                
         'PORT'    : '3306',
     }
 }
