@@ -1,5 +1,5 @@
 from django import forms
-from .models import  Guest, accomodation_category, accompacks,accomodation_category,rentalunit3,DueReceipt,Receipt,room_category
+from .models import  Guest, accomodation_category, accompacks,accomodation_category,rentalunit3,DueReceipt,room_category
 
 
 
@@ -64,15 +64,6 @@ class DueReceiptForm(forms.ModelForm):
             'text': forms.Textarea(attrs={'class': 'form-control', 'rows': 5, 'cols': 20}),
         }
 
-class ReceiptForm(forms.ModelForm):
-    error_css_class='error-field'
-
-    class Meta:
-        model = Receipt
-        fields = fields = '__all__'
-        widgets = {
-            'text': forms.Textarea(attrs={'class': 'form-control', 'rows': 5, 'cols': 20}),
-        }
 
 
 
