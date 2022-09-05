@@ -124,13 +124,6 @@ class Transactons(models.Model):
     date  = DateField()
     systime  = DateField()
 
-class Receipt(models.Model):
-    acno = models.IntegerField()
-    guestnumb = models.IntegerField()
-    roomno= models.CharField(max_length=10)
-    amount =  DecimalField(max_digits=9, decimal_places=2, default = 0)
-    date  = DateField()
-    systime  = DateField()
 
 
 
