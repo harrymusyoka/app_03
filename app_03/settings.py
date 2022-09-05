@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoprimport dj_database_url
 oject.com/en/4.1/ref/settihttps://cloud.digitalocean.com/droplets/315231183/ngs/
 """
-
+'apps-03-3b3ea.ondigitalocean.app'
 
 from pathlib import Path
 from django.contrib.messages import constants as messages
@@ -43,7 +43,7 @@ SECRET_KEY = 'enter-your-app-secret-key-here-a-super-long-super-hard-to-guess-se
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://cloud.digitalocean.com/droplets/315231183/terminal/ui/?os_user=root']
+ALLOWED_HOSTS = ['apps-03-3b3ea.ondigitalocean.app']
 #ALLOWED_HOSTS = ['']
 
 # Application definition
