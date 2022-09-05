@@ -105,11 +105,11 @@ def rentalunitpr(request):
         roomdesc0=request.POST['roomdesc']
         roomtype0=request.POST['roomtype']
         rate0=request.POST['rate']
-        rental=rentalunit3.objects.create(roomno=roomno0,roomdesc=roomdesc0,roomtype=roomtype0, rate= rate0)
+        rental=rentalunit.objects.create(roomno=roomno0,roomdesc=roomdesc0,roomtype=roomtype0, rate= rate0)
        
         rental.save()
         messages.success(request,'Data has been submitted')
-        form = rentalunit3Form()
+        form = rentalunitForm()
     return render(request,  'apps03/add_rentalunit.html', {'form': form})
 
 
