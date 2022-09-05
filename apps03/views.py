@@ -35,8 +35,8 @@ def polls_list(request):
 def ru_list(request):
      #rentalunit2.objects.all().delete()
      st = rentalunit3.objects.all() # Collect all records from table 
-     count= rentalunit3.objects.all().count()
-     print(count)
+    
+    
   
      return render (request,'apps03/rentalunitslist.html', {
         'rental_units': st
