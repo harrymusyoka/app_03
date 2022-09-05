@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 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
 For the full list of settings and their values, see
 https://docs.djangoprimport dj_database_url
-oject.com/en/4.1/ref/settihttps://cloud.digitalocean.com/droplets/315231183/ngs/
+oject.com/en/4.1/ref/settings/
 """
 
 
@@ -43,8 +43,8 @@ SECRET_KEY = 'enter-your-app-secret-key-here-a-super-long-super-hard-to-guess-se
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://cloud.digitalocean.com/droplets/315231183/terminal/ui/?os_user=root']
-#ALLOWED_HOSTS = ['']
+ALLOWED_HOSTS = ['*']
+
 
 # Application definition
 
@@ -100,26 +100,17 @@ WSGI_APPLICATION = 'app_03.wsgi.application'
 
 DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
-#
-#DATABASES = {
-# 'default': {
-#  'ENGINE'  : 'django.db.backends.mysql', # <-- UPDATED line 
-#  'NAME'    : 'defaultdb',                 # <-- UPDATED line 
-#  'USER'    : 'doadmin',                     # <-- UPDATED line
-#  'PASSWORD': 'AVNS_opSyNyIDAt49SbpzqG_',              # <-- UPDATED
-#  'HOST'    : 'db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com',                # <
-#  'PORT'    : '25060',
-# }
-#}
+
+
 
 DATABASES = {
     'default': {
         'ENGINE'  : 'django.db.backends.mysql', # <-- UPDATED line 
-        'NAME'    : 'dbapps03',                 # <-- UPDATED line 
-        'USER'    : 'root@droplet-01',                     # <-- UPDATED line
-        'PASSWORD': '',              # <-- UPDATED line
-        'HOST'    : 'db-mysql-nyc3-16778-douser-11647348-0.b.db.ondigitalocean.com',                
-        'PORT'    : '3306',
+        'NAME'    : 'defaultdb',                 # <-- UPDATED line 
+        'USER'    : 'doadmin',                     # <-- UPDATED line
+        'PASSWORD': 'AVNS_opSyNyIDAt49SbpzqG_',              # <-- UPDATED line
+        'HOST'    : 'db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com',                # <-- UPDATED line
+        'PORT'    : '25060',
     }
 }
 

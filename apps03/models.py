@@ -97,7 +97,7 @@ class CommonInfo(Model):
     class Meta:
         abstract = True
 
-
+      
 class rentalunit3(models.Model):
      
      roomno = CharField(max_length=2, choices=rmn_CHOICES)                    
