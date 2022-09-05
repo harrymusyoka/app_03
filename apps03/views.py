@@ -3,9 +3,9 @@ from django.template import loader
 from django.http import HttpResponse
 from django.contrib import messages
 
-from .forms import rentalunit3Form
+from .forms import rentalunitForm
 
-from .models import rentalunit3
+from .models import rentalunit
 import mysql.connector
 
 def   login(request):
@@ -34,12 +34,12 @@ def polls_list(request):
 
 def ru_list(request):
      #rentalunit2.objects.all().delete()
-     st = rentalunit3.objects.all() # Collect all records from table 
+     rental_units = rentalunit.objects.all() # Collect all records from table 
     
     
   
      return render (request,'apps03/rentalunitslist.html', {
-        'rental_units': st
+        'rental_units': rental_units
     })
 
 
@@ -79,11 +79,11 @@ def commcatsv(request):
 
 def add_rentalunit(request):
      if request.method == 'POST':
-        form = rentalunit3Form(request.POST)
+        form = rentalunitForm(request.POST)
         if form.is_valid():
             print('valid')
      else:
-            form = rentalunit3Form()
+            form = rentalunitForm()
      return render(request, 'apps03/add_rentalunit.html',{'form': form})
 
 

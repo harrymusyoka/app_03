@@ -1,13 +1,13 @@
 from django import forms
-from .models import  Guest, accomodation_category, accompacks,accomodation_category,rentalunit3,DueReceipt,room_category
+from .models import  Guest, accomodation_category, accompacks,accomodation_category,rentalunit,DueReceipt,room_category
 
 
 
-class rentalunit3Form(forms.ModelForm):
+class rentalunitForm(forms.ModelForm):
     error_css_class='error-field'
 
     class Meta:
-        model = rentalunit3
+        model = rentalunit
         fields = ['roomno', 'roomdesc', 'roomtype', 'rate']
 
         widgets = {
