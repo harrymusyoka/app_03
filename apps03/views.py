@@ -97,6 +97,20 @@ def view_rentalunit(request):
      return render(request, 'apps03/view_rentalunit.html',{'rental_units': form})
 
 
+def edit_rentalunit(request, rn):
+     if request.method == 'POST':
+        form = rentalunitForm(request.POST)
+        if form.is_valid():
+            print('valid')
+     else:
+            form = rentalunitForm()
+     return render(request, 'apps03/edit_rentalunit.html',{'form': form})
+
+
+
+
+
+
 def addguest(request):
        template = loader.get_template('apps03/main-menu.html')
        return HttpResponse(template.render())

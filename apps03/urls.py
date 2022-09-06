@@ -9,7 +9,7 @@ urlpatterns = [
 
     path('apps03/login/', views.login, name='login'),
     path('apps03/add_accomcat/', views.add_accomcat, name='add_accomcat'),
-    
+   
     path('apps03/ru_list/', views.ru_list, name='ru_list'),
 
     path('dashboard/', views.dashboard, name='dashboard'),
@@ -28,6 +28,9 @@ urlpatterns = [
 
 
     path('apps03/add_rentalunit/', views.add_rentalunit, name='add_rentalunit'),
+    path('apps03/edit_rentalunit/', views.edit_rentalunit, name='edit_rentalunit'),
+
+    
     path('apps03/add_guest/',views.add_guest, name='add_guest'),
     path('addguest/',views.addguest, name='addguest'),
 
