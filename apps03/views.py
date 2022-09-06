@@ -109,16 +109,16 @@ def rentalunitpr(request):
         rental=rentalunit.objects.create(roomno=roomno0,roomdesc=roomdesc0,roomtype=roomtype0, rate= rate0)
        
         rental.save()
-        messages.success(request,'Data has been submitted')
-        form = rentalunitForm()
-    return render(request,  'apps03/add_rentalunit.html', {'form': form})
-    rental_units = rentalunit.objects.all() # Collect all records from table 
+       # messages.success(request,'Data has been submitted')
+      #  form = rentalunitForm()
+   # return render(request,  'apps03/add_rentalunit.html', {'form': form})
+        rental_units = rentalunit.objects.all() # Collect all records from table 
     
     
   
-     return render (request,'apps03/rentalunitslist.html', {
+        return render (request,'apps03/rentalunitslist.html', {
         'rental_units': rental_units
-    })
+          })
 
 
 
