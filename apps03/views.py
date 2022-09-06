@@ -112,6 +112,13 @@ def rentalunitpr(request):
         messages.success(request,'Data has been submitted')
         form = rentalunitForm()
     return render(request,  'apps03/add_rentalunit.html', {'form': form})
+    rental_units = rentalunit.objects.all() # Collect all records from table 
+    
+    
+  
+     return render (request,'apps03/rentalunitslist.html', {
+        'rental_units': rental_units
+    })
 
 
 
