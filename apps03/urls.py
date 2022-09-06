@@ -28,7 +28,7 @@ urlpatterns = [
 
 
     path('apps03/add_rentalunit/', views.add_rentalunit, name='add_rentalunit'),
-    path('apps03/edit_rentalunit/', views.edit_rentalunit, name='edit_rentalunit'),
+    path('apps03/edit_rentalunit/<int:rn>/', views.edit_rentalunit, name='edit_rentalunit'),
 
     
     path('apps03/add_guest/',views.add_guest, name='add_guest'),

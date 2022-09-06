@@ -98,6 +98,8 @@ def view_rentalunit(request):
 
 
 def edit_rentalunit(request, rn):
+     roomno = request.rn
+     
      if request.method == 'POST':
         form = rentalunitForm(request.POST)
         if form.is_valid():
