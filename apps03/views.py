@@ -97,9 +97,8 @@ def view_rentalunit(request):
      return render(request, 'apps03/view_rentalunit.html',{'rental_units': form})
 
 
-def edit_rentalunit(request, rn):
-     roomno = request.rn
-     
+def edit_rentalunit(request):
+         
      if request.method == 'POST':
         form = rentalunitForm(request.POST)
         if form.is_valid():
