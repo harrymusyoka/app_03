@@ -14,6 +14,21 @@ class rentalunitForm(forms.ModelForm):
             'text': forms.Textarea(attrs={'class': 'form-control', 'rows': 5, 'cols': 20}),
         }
 
+
+class rentalunitvForm(forms.ModelForm):
+    error_css_class='error-field'
+
+    class Meta:
+        model = rentalunit
+        fields = ['roomno', 'roomdesc', 'roomtype', 'rate', 'id']
+
+        widgets = {
+            'text': forms.Textarea(attrs={'class': 'form-control', 'rows': 5, 'cols': 20}),
+        }
+
+
+
+
 class GuestForm(forms.ModelForm):
     error_css_class='error-field'
 

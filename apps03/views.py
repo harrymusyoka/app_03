@@ -87,6 +87,14 @@ def add_rentalunit(request):
      return render(request, 'apps03/add_rentalunit.html',{'form': form})
 
 
+def view_rentalunit(request):
+     if request.method == 'POST':
+        form = rentalunitvForm(request.POST)
+        if form.is_valid():
+            print('valid')
+     else:
+            form = rentalunitvForm()
+     return render(request, 'apps03/view_rentalunit.html',{'rental_units': form})
 
 
 def addguest(request):
