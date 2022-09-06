@@ -17,9 +17,9 @@ urlpatterns = [
     path('apps03/dashboard/', views.dashboard, name='dashboard'),
     path('apps03/polls_list/', views.polls_list, name='polls_list'),
     path('apps03/task_create/', views.task_create, name='task_create'),
-    path('viewpro/', views.viewpro, name='viewpro'),
+    path('apps03/viewpro/', views.viewpro, name='viewpro'),
 
-
+    path('apps03/view_rentalunit/', views.view_rentalunit, name='view_rentalunit'),
 
     path('commcatsv/', views.commcatsv, name='commcatsv'), 
 
