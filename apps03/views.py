@@ -3,7 +3,7 @@ from django.template import loader
 from django.http import HttpResponse
 from django.contrib import messages
 
-from .forms import rentalunitForm
+from .forms import rentalunitForm, rentalunitvForm
 
 from .models import rentalunit
 import mysql.connector
@@ -87,7 +87,7 @@ def add_rentalunit(request):
      return render(request, 'apps03/add_rentalunit.html',{'form': form})
 
 
-def view_rentalunit(request):
+def view_rentalunit(request, rn):
      if request.method == 'POST':
         form = rentalunitvForm(request.POST)
         if form.is_valid():

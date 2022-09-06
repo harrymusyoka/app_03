@@ -8,7 +8,7 @@ class rentalunitForm(forms.ModelForm):
 
     class Meta:
         model = rentalunit
-        fields = ['roomno', 'roomdesc', 'roomtype', 'rate', 'id']
+        fields = ['roomno', 'roomdesc', 'roomtype', 'rate' ]
 
         widgets = {
             'text': forms.Textarea(attrs={'class': 'form-control', 'rows': 5, 'cols': 20}),
@@ -20,7 +20,7 @@ class rentalunitvForm(forms.ModelForm):
 
     class Meta:
         model = rentalunit
-        fields = ['roomno', 'roomdesc', 'roomtype', 'rate', 'id']
+        fields = ['roomno', 'roomdesc', 'roomtype', 'rate']
 
         widgets = {
             'text': forms.Textarea(attrs={'class': 'form-control', 'rows': 5, 'cols': 20}),
