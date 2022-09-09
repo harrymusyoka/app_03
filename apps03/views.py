@@ -27,7 +27,7 @@ def   login(request):
       print(a)
 
       
-      template = loader.get_template('apps03/login.html')
+      template = loader.get_template('apps03/index.html')
       return HttpResponse(template.render())
 
 def year_archive(request, year):
