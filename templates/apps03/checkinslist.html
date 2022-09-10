@@ -1,0 +1,91 @@
+{% extends 'apps03/base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-sm-2">
+            <h1 class="text-center mt-3 mb-3">Rental Units List!</h1>
+            {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                <div {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <a class="btn btn-{% if 'name' in request.GET %}warning{% else %}primary{% endif %} mb-3" href="?name=True"
+                role="button"><i class="fas fa-sort-alpha-down"></i>
+                Unit-No</a>
+            <a class="btn btn-{% if 'date' in request.GET %}warning{% else %}primary{% endif %} mb-3" href="?date=True"
+                role="button"><i class="far fa-clock"></i> Description</a>
+                
+              <a class="btn btn-{% if 'date' in request.GET %}warning{% else %}primary{% endif %} mb-3" href="?date=True"
+                role="button"><i class="far fa-clock"></i>Unit-Type</a>
+          
+                
+                
+                
+                
+            <a class="btn btn-{% if 'vote' in request.GET %}warning{% else %}primary{% endif %} mb-3" href="?vote=True"
+                role="button"><i class="fas fa-poll"></i>Rate</a>
+
+        
+            <form class="form-inline">
+                <div class="form-group mr-sm-2 mb-2">
+                    <input type="search" class="form-control" name="search" placeholder="Search" value={{ search_term }}>
+                </div>
+                <button type="submit" class="btn btn-primary mb-2"><i class="fas fa-search"></i></button>
+            </form>
+ 
+ 
+            {% spaceless %}
+            <table border="1">
+            <COLGROUP>
+            <COL width="100"><COL width="100">
+                          
+            <ul class="list-group">
+                {% for Ru in rental_units %}
+                 <THEAD>
+                <tr>
+                    <td style="width:15%" >{{Ru.roomno}}    </td>
+                    <td style="width:45%"   >{{Ru.roomdesc}}</td>
+                   <td  style="width:13%">{{Ru.roomtype }}</td> 
+                  <td style="width:12%">{{Ru.rate }} </td>
+                  
+                  <td style="width:15%"> <a href="{% url 'view_rentalunit' rno=Ru.roomno %}">[edit]</a>  </td>
+                  
+                  </tr>
+                {% endfor %}
+                                           
+            </table></center>
+   
+            
+            {% endspaceless %}
+            <nav class="mt-3">
+                <ul class="pagination">
+                    {% if Ru.has_previous %}
+                    <li class="page-item"><a class="page-link" href="?page=1&{{ params }}">First</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ rental_units.previous_page_number }}&{{ params }}">Previous</a></li>
+                    {% endif %}
+
+                    <li class="page-item active"><a class="page-link" href="">{{ Ru.roomno }}</a></li>
+
+                    {% if Ru.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ rental_units.next_page_number }}&{{ params }}">Next</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ rental_units.paginator.num_pages }}&{{ params }}">Last</a></li>
+                    {% endif %}
+                </ul>
+                
+                     <a class="btn btn-primary mb-3 float-right" href="{% url 'add_rentalunit' %}" role="button">Add-New-Unit<i class="fas fa-plus"></i></a>
+
+                
+            </nav>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
