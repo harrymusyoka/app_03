@@ -4,7 +4,7 @@ from django.template import loader
 from django.http import HttpResponse
 from django.contrib import messages
 from apps03.models import  bookings
-from apps03.forms import  checkinsForm
+from apps03.forms import  bookingsForm
 
 
 def   login(request):
@@ -28,11 +28,11 @@ def year_archive(request, year):
 
 def checkinsadd(request):
     if request.method == 'POST':
-        form = rentalunitForm(request.POST)
+        form = bookingsForm(request.POST)
         if form.is_valid():
             print('valid')
     else:
-            form = checkinsForm()
+            form = bookingsForm()
             return render(request, 'apps03/add_checkins.html',{'form': form})
 
 
