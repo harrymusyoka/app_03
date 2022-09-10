@@ -31,9 +31,9 @@ def checkinsadd(request):
         form = rentalunitForm(request.POST)
         if form.is_valid():
             print('valid')
-     else:
+    else:
             form = checkinsForm()
-     return render(request, 'apps03/add_checkins.html',{'form': form})
+    return render(request, 'apps03/add_checkins.html',{'form': form})
 
 
 
