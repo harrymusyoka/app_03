@@ -1,5 +1,5 @@
 from django import forms
-from .models import  checki, bookings
+from apps03.models import  checki, bookings
 
 class checkinsForm(forms.ModelForm):
     error_css_class='error-field'
