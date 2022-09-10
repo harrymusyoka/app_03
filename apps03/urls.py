@@ -1,5 +1,5 @@
 from django.urls import path 
-from apps03.views  chieckinsadd
+ 
 from . import views
 
 
