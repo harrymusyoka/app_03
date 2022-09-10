@@ -33,7 +33,7 @@ def checkinsadd(request):
             print('valid')
     else:
             form = checkinsForm()
-    return render(request, 'apps03/add_checkins.html',{'form': form})
+            return render(request, 'apps03/add_checkins.html',{'form': form})
 
 
 
