@@ -122,10 +122,10 @@ DATABASES = {
      #   'HOST'    : 'apps-03-3b3ea.ondigitalocean.app',                
    #     'PORT'    : '3306',
          'ENGINE'  : 'django.db.backends.mysql', # <-- UPDATED line 
-         'NAME'    : 'dbapps03a',                 # <-- UPDATED line 
+         'NAME'    : 'dbapps03b',                 # <-- UPDATED line 
          'USER'    : 'harrisonmusyoka',                     # <-- UPDATED line
-         'PASSWORD': 'AVNS_sAGT7gSinrV3EWRiZbz',              # <-- UPDATED
-         'HOST'    : 'db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com',         
+         'PASSWORD': 'AVNS_opSyNyIDAt49SbpzqG_',              # <-- UPDATED
+         'HOST'    : 'ddb-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com',         
          'PORT'    : '25060',
 
         
