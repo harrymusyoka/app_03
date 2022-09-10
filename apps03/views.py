@@ -4,7 +4,7 @@ from django.template import loader
 from django.http import HttpResponse
 from django.contrib import messages
 from apps03.models import  bookings
-from apps03.models import  checkinsForm
+from apps03.forms import  checkinsForm
 
 
 def   login(request):
@@ -26,9 +26,13 @@ def year_archive(request, year):
     context = {'year': year, 'article_list': a_list}
     return render(request, 'apps03/year_archive.html', context)
 
-
-
 def checkinsadd(request):
+
+    form = checkinsForm()
+    return render(request,  'apps03/add_checkins.html', {'form': form})
+
+
+def checkinsaddpr(request):
     if request.method=='POST':
         seq0=request.POST['seq']
         rm0=request.POST['rm']
