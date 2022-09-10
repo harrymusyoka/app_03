@@ -4,7 +4,7 @@ from django.template import loader
 from django.http import HttpResponse
 from django.contrib import messages
 from .forms import checkinsForm
-from .models import Checkinstab
+from .models import Checki
 from .models import Article
 
 
@@ -36,7 +36,7 @@ def checkinsadd(request):
         occ0=request.POST['occ']
         days0=request.POST['days']
         rate0=request.POST['rate']
-        checkins0=checkinstab.objects.create(seq=seq0,rm=rm0,occ=occ0,days=days0, rate= rate0)      
+        checkins0=checki.objects.create(seq=seq0,rm=rm0,occ=occ0,days=days0, rate= rate0)      
         checkins0.save()
         messages.success(request,'Data has been submitted')
         form = checkinsForm()
@@ -44,7 +44,7 @@ def checkinsadd(request):
 
 def checkins_list(request):
      #rentalunit2.objects.all().delete()
-     checkinss = checkinstab.objects.all() # Collect all records from table 
+     checkinss = checki.objects.all() # Collect all records from table 
     
     
   

@@ -1,11 +1,11 @@
 from django import forms
-from .models import  Checkinstab
+from .models import  checki
 
 class checkinsForm(forms.ModelForm):
     error_css_class='error-field'
 
     class Meta:
-        model = checkinstab
+        model = checki
         fields = ['seq', 'rm', 'occ', 'days', 'rate' ]
 
         widgets = {

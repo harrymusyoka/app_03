@@ -17,10 +17,9 @@ class Article(models.Model):
     reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE)
     
     
-class Checkinstab(models.Model):
+class Checki(models.Model):
     seq = models.IntegerField()
     rm = models.CharField(max_length=6)
     mark = models.CharField(max_length=6)
     days = models.IntegerField()
-
     rate = DecimalField(max_digits=9, decimal_places=2)
