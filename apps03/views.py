@@ -51,3 +51,21 @@ def checkins_list(request):
      return render (request,'apps03/checkinslist.html', {
         'checkinss': checkinss
     })
+    
+    
+def view_booking(request):
+     if request.method == 'POST':
+        form = bookingsForm(request.POST)
+        if form.is_valid():
+            print('valid')
+     else:
+            form = bookingsForm()
+     return render(request, 'apps03/view_bookings.html',{'bookings': form})
+   
+    
+    
+    
+    
+    
+    
+    

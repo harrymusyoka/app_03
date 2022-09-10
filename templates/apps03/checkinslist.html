@@ -19,12 +19,12 @@
 
             <a class="btn btn-{% if 'name' in request.GET %}warning{% else %}primary{% endif %} mb-3" href="?name=True"
                 role="button"><i class="fas fa-sort-alpha-down"></i>
-                Unit-No</a>
+                Unit</a>
             <a class="btn btn-{% if 'date' in request.GET %}warning{% else %}primary{% endif %} mb-3" href="?date=True"
-                role="button"><i class="far fa-clock"></i> Description</a>
+                role="button"><i class="far fa-clock"></i> occ</a>
                 
               <a class="btn btn-{% if 'date' in request.GET %}warning{% else %}primary{% endif %} mb-3" href="?date=True"
-                role="button"><i class="far fa-clock"></i>Unit-Type</a>
+                role="button"><i class="far fa-clock"></i>days</a>
           
                 
                 
@@ -48,15 +48,15 @@
             <COL width="100"><COL width="100">
                           
             <ul class="list-group">
-                {% for Ru in rental_units %}
+                {% for ci in checkinss %}
                  <THEAD>
                 <tr>
-                    <td style="width:15%" >{{Ru.roomno}}    </td>
-                    <td style="width:45%"   >{{Ru.roomdesc}}</td>
-                   <td  style="width:13%">{{Ru.roomtype }}</td> 
-                  <td style="width:12%">{{Ru.rate }} </td>
+                    <td style="width:15%" >{{ci.rm}}    </td>
+                    <td style="width:45%"   >{{ci.occ}}</td>
+                   <td  style="width:13%">{{ci.days }}</td> 
+                  <td style="width:12%">{{ci.rate }} </td>
                   
-                  <td style="width:15%"> <a href="{% url 'view_rentalunit' rno=Ru.roomno %}">[edit]</a>  </td>
+                  <td style="width:15%"> <a href="{% url 'view_booking' rno=ci.rm %}">[edit]</a>  </td>
                   
                   </tr>
                 {% endfor %}

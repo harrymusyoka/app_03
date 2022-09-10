@@ -1,0 +1,54 @@
+{% extends 'apps03/base.html' %}
+request.user.get_full_name() if request.user.is_authenticated() else ""
+{% block content %}
+<div class="container">
+    <div class="row center">
+        <div class="col-md-6 offset-md-3">
+            <h2>View Booking</h2>
+            
+            
+            
+            # listings/templates/apps03/view_bookings.html
+
+...
+       ...
+            
+            
+              {% for ci in bookings %}
+                 <THEAD>
+                <tr>
+                    <td style="width:15%" >{{ci.rm}}    </td>
+                 </tr>
+                 <tr>
+                    <td style="width:45%"   >{{ci.occ}}</td> </tr>
+                  <tr> <td  style="width:20%">{{ci.days }}</td> </tr>
+                  <tr>
+                  <td style="width:20%">{{ci.rate }} </td>
+                  </tr>
+                  <tr>
+                  <td <a href="{% url 'edit_rentalunit'  %}">[edit]</a>  </td>
+                  </tr>
+                {% endfor %}
+  
+            
+            
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+ 
+            <form action="/apps03/rentalunitpr/"   method="post" novalidate>
+            {% csrf_token %}
+             <table border="1">
+             {{ form }}
+             </table>
+            <button type="submit">Submit</button>
+              </form>
+        
+        </div>
+    </div>
+</div>
+{% endblock %}
