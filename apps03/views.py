@@ -21,7 +21,7 @@ def   login(request):
       checkinss = bookings.objects.all() # Collect all records from table 
      
     
-      count = self.bookings.count()
+      count = bookings.objects.all().count()
       print(count)
       return render (request,'apps03/checkinslist.html', {
         'checkinss': checkinss
