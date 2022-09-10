@@ -1,11 +1,11 @@
 from django import forms
-from apps03.models import  checki, bookings
+from apps03.models import   bookings
 
 class checkinsForm(forms.ModelForm):
     error_css_class='error-field'
 
     class Meta:
-        model = checki
+        model = checki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
         fields = ['seq', 'rm', 'occ', 'days', 'rate' ]
 
         widgets = {
