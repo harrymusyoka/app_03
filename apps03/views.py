@@ -51,9 +51,16 @@ def checkinsaddpr(request):
         rate0=request.POST['rate']
         checkins0=bookings.objects.create(seq=seq0,rm=rm0,occ=occ0,days=days0, rate= rate0)      
         checkins0.save()
-        messages.success(request,'Data has been submitted')
-        form = checkinsForm()
-    return render(request,  'apps03/add_checkins.html', {'form': form})
+        
+        checkinss = bookings.objects.all() # Collect all records from table 
+    
+    
+  
+    return render (request,'apps03/checkinslist.html', {
+        'checkinss': checkinss
+    })
+
+ 
 
 def checkins_list(request):
      #rentalunit2.objects.all().delete()
