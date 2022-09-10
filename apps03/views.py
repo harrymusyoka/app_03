@@ -18,9 +18,15 @@ def   login(request):
       #mycursor.execute(sql) 
       a = "Hello"
       print(a)
-      template = loader.get_template('apps03/checkinslist.html')
-      return HttpResponse(template.render())
+      checkinss = bookings.objects.all() # Collect all records from table 
+    
+    
+  
+      return render (request,'apps03/checkinslist.html', {
+        'checkinss': checkinss
+      })
 
+     
 def year_archive(request, year):
     a_list = Article.objects.filter(pub_date__year=year)
     context = {'year': year, 'article_list': a_list}
