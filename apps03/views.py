@@ -3,9 +3,8 @@ from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
 from django.contrib import messages
- 
 from apps03.models import  bookings
- 
+from apps03.models import  checkinsForm
 
 
 def   login(request):
