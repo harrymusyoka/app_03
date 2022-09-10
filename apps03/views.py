@@ -3,14 +3,14 @@ from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
 from django.contrib import messages
-from .forms import checkinsForm
-from .models import Checki, bookings
+from apps03.forms import checkinsForm
+from apps03.models import Checki, bookings
 from .models import Article, bookingsForm
 
 
 def   login(request):
       #mydb = mysql.connector.connect(
-      #host="db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com",
+      #host="db-mysql-nyc3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-16778-do-user-11647348-0.b.db.ondigitalocean.com",
       #user="doadmin",
       #password="AVNS_opSyNyIDAt49SbpzqG_",
       #database="defaultdb")
