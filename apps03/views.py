@@ -27,9 +27,19 @@ def year_archive(request, year):
     return render(request, 'apps03/year_archive.html', context)
 
 def checkinsadd(request):
+    if request.method == 'POST':
+        form = rentalunitForm(request.POST)
+        if form.is_valid():
+            print('valid')
+     else:
+            form = checkinsForm()
+     return render(request, 'apps03/add_checkins.html',{'form': form})
 
-    form = checkinsForm()
-    return render(request,  'apps03/add_checkins.html', {'form': form})
+
+
+
+
+
 
 
 def checkinsaddpr(request):
