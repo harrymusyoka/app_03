@@ -17,7 +17,7 @@ class Article(models.Model):
     reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE)
     
     
-class Checkins(models.Model):
+class Checkinstab(models.Model):
     seq = models.IntegerField()
     rm = models.CharField(max_length=6)
     mark = models.CharField(max_length=6)
