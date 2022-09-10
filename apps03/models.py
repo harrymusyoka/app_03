@@ -22,4 +22,12 @@ class Checki(models.Model):
     rm = models.CharField(max_length=6)
     mark = models.CharField(max_length=6)
     days = models.IntegerField()
-    rate = DecimalField(max_digits=9, decimal_places=2)
+    rate = models.IntegerField()
+        
+class bookings(models.Model):
+    checkin_date = models.DateField()
+    rm = models.CharField(max_length=10)
+    mark = models.CharField(max_length=10)
+    seq = models.IntegerField()
+    days = models.IntegerField()
+    rate =  models.IntegerField()
