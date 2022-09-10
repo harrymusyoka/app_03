@@ -123,7 +123,7 @@ DATABASES = {
    #     'PORT'    : '3306',
          'ENGINE'  : 'django.db.backends.mysql', # <-- UPDATED line 
          'NAME'    : 'dbapps03b',                 # <-- UPDATED line 
-         'USER'    : 'harrisonmusyoka',                     # <-- UPDATED line
+         'USER'    : 'doadmin',                     # <-- UPDATED line
          'PASSWORD': 'AVNS_opSyNyIDAt49SbpzqG_',              # <-- UPDATED
          'HOST'    : 'db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com',         
          'PORT'    : '25060',
