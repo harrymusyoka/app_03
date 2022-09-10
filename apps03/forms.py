@@ -9,7 +9,7 @@ class bookingsForm(forms.ModelForm):
 
     class Meta:
         model = bookings
-        fields = ['seq', 'rm', 'occ', 'days', 'rate' ]
+        fields = ['seq', 'rm', 'mark', 'days', 'rate' ]
 
         widgets = {
             'text': forms.Textarea(attrs={'class': 'form-control', 'rows': 5, 'cols': 20}),
