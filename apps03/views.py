@@ -17,11 +17,12 @@ def   login(request):
       #sql = "DROP TABLE rentalunit"
       #mycursor.execute(sql) 
       a = "Hello"
-      print(a)
+   
       checkinss = bookings.objects.all() # Collect all records from table 
+     
     
-    
-  
+      count = self.bookings.count()
+      print(count)
       return render (request,'apps03/checkinslist.html', {
         'checkinss': checkinss
       })
