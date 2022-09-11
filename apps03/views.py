@@ -94,11 +94,11 @@ def year_archive(request, year):
 
 def checkinsadd(request):
     if request.method == 'POST':
-        form = bookingsForm(request.POST)
+        form = checkiForm(request.POST)
         if form.is_valid():
             print('valid')
     else:
-            form = bookingsForm()
+            form = checkiForm()
     return render(request, 'apps03/add_checkins.html',{'form': form})
 
 
@@ -115,9 +115,9 @@ def checkinsaddpr(request):
         occ0=request.POST['mark']
         days0=request.POST['days']
         rate0=request.POST['rate']
-        checkins0=bookings.objects.create(seq=seq0,rm=rm0,mark=occ0,days=days0, rate= rate0)      
+        checkins0=checki.objects.create(seq=seq0,rm=rm0,mark=occ0,days=days0, rate= rate0)      
         checkins0.save()        
-        checkinss = bookings.objects.all() # Collect all records from table   
+        checkinss = checki.objects.all() # Collect all records from table   
         return render (request,'apps03/checkinslist.html', {
         'checkinss': checkinss
     })
