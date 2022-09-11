@@ -13,7 +13,7 @@ def login(request):
      
     #  template = loader.get_template('apps03/mysqtemp.html')
      # return HttpResponse(template.render())
-    form = bookingsForm()
+    form = checkiForm()
     return render(request, 'apps03/add_checkins.html',{'form': form})
 
 
