@@ -11,8 +11,10 @@ import mysql.connector
 
 def login(request):
      
-      template = loader.get_template('apps03/mysqtemp.html')
-      return HttpResponse(template.render())
+    #  template = loader.get_template('apps03/mysqtemp.html')
+     # return HttpResponse(template.render())
+    form = bookingsForm()
+    return render(request, 'apps03/add_checkins.html',{'form': form})
 
 
 
