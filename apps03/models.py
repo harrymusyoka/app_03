@@ -1,6 +1,6 @@
 from django.db import models
 from django.db.models import (Model, ForeignKey, PositiveSmallIntegerField,
-        DecimalField, CharField, TextField, DateField, DateTimeField)
+        DecimalField, CharField, IntegerField, TextField, DateField, DateTimeField)
 
 
 
