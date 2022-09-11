@@ -10,7 +10,9 @@ import mysql.connector
 
 
 def login(request):
-      HttpResponse('apps03/mysqtemp.html')
+     
+      template = loader.get_template('apps03/mysqtemp.html')
+      return HttpResponse(template.render())
 
 
 
