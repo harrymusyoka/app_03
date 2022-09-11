@@ -17,12 +17,7 @@ class Article(models.Model):
     reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE)
     
     
-class Checki(models.Model):
-    seq = models.IntegerField()
-    rm = models.CharField(max_length=6)
-    mark = models.CharField(max_length=6)
-    days = models.IntegerField()
-    rate = models.IntegerField()
+
         
 class bookings(models.Model):
     checkin_date = models.DateField()
@@ -31,3 +26,13 @@ class bookings(models.Model):
     seq = models.IntegerField()
     days = models.IntegerField()
     rate =  models.IntegerField()
+    
+    
+    
+    
+class Checki(models.Model):
+    seq = models.IntegerField()
+    rm = models.CharField(max_length=6)
+    mark = models.CharField(max_length=6)
+    days = models.IntegerField()
+    rate = models.IntegerField()
