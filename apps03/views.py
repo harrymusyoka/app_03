@@ -3,9 +3,9 @@ from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
 from django.contrib import messages
-from apps03.models import  bookings
+from apps03.models import  bookings, checki
 from apps03.forms import  bookingsForm,checkiForm
-import mysql.connector
+#import mysql.connector
 
 
 
@@ -116,7 +116,8 @@ def checkinsaddpr(request):
         days0=request.POST['days']
         rate0=request.POST['rate']
         checkins0=checki.objects.create(seq=seq0,rm=rm0,mark=occ0,days=days0, rate= rate0)      
-        checkins0.save()        
+        checkins0.save()  
+  
         checkinss = checki.objects.all() # Collect all records from table   
         return render (request,'apps03/checkinslist.html', {
         'checkinss': checkinss
