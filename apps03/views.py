@@ -22,8 +22,8 @@ def login(request):
  
     myresult = mycursor.fetchall()
  
-    for x in myresult:
-        print(x)
+    #for x in myresult:
+     #   print(x)
 
     return render (request,'apps03/checkinslist.html', {
        'checkinss': myresult
