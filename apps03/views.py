@@ -3,8 +3,8 @@ from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
 from django.contrib import messages
-from apps03.models import  bookings, checki
-from apps03.forms import  bookingsForm,checkiForm
+from apps03.models import  bookings, chk
+from apps03.forms import  bookingsForm,chkForm
 #import mysql.connector
 
 

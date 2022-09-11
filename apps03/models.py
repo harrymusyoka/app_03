@@ -28,7 +28,14 @@ class bookings(models.Model):
     rate =  models.IntegerField()
     
     
-    
+class chk(models.Model):
+    checkin_date = models.DateField()
+    rm = models.CharField(max_length=10)
+    mark = models.CharField(max_length=10)
+    seq = models.IntegerField()
+    days = models.IntegerField()
+    rate =  models.IntegerField()
+
     
 class Checki(models.Model):
     seq = models.IntegerField()

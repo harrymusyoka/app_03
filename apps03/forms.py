@@ -1,5 +1,5 @@
 from django import forms
-from apps03.models import   bookings, checki
+from apps03.models import   bookings, chk
 
 
         
@@ -17,13 +17,17 @@ class bookingsForm(forms.ModelForm):
         
  
 
-class checkiForm(forms.ModelForm):
+class chkForm(forms.ModelForm):
     error_css_class='error-field'
 
     class Meta:
-        model = checki
+        model = chk
         fields = ['seq', 'rm', 'mark', 'days', 'rate' ]
 
         widgets = {
             'text': forms.Textarea(attrs={'class': 'form-control', 'rows': 5, 'cols': 20}),
         }
+
+
+
+
