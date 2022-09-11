@@ -7,9 +7,16 @@ from apps03.models import  bookings
 from apps03.forms import  bookingsForm
 import mysql.connector
 
-
-
 def login(request):
+    myresult = "Harry Musyoka"
+    
+    return render (request,'apps03/checkinslist.html', {
+       'checkinss': myresult
+       })
+
+
+
+def login3(request):
     mydb = mysql.connector.connect(
     host="db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com",
     user="doadmin",
