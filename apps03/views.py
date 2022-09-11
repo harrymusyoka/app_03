@@ -24,7 +24,10 @@ def login(request):
  
     for x in myresult:
         print(x)
-
+        
+def    mysqlfunc(request):
+       x="43"
+       print(x)
 
 def   login1(request):
       #mydb = mysql.connector.connect(
@@ -36,7 +39,7 @@ def   login1(request):
       #sql = "DROP TABLE rentalunit"
       #mycursor.execute(sql) 
       a = "Hello"
-      mysqlfunc()
+     
      # checkinss = bookings.objects.all() # Collect all records from table 
      
     
