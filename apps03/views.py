@@ -24,6 +24,12 @@ def login(request):
  
     for x in myresult:
         print(x)
+
+    return render (request,'apps03/checkinslist.html', {
+       'checkinss': myresult
+       })
+
+
         
 def    mysqlfunc(request):
        x="43"
