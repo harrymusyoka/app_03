@@ -21,7 +21,7 @@ def login(request):
 
 
 def login4(request):
-    myresult = "Harry Musyoka"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
+    myresult = "Harry Musyoka"
     mydb = mysql.connector.connect(
     host="db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com",
     user="doadmin",
