@@ -1,5 +1,5 @@
 from django.urls import path 
-from apps03.views import views
+from apps03 import views
 
 urlpatterns = [
     path('apps03/year_archive/', views.year_archive),
