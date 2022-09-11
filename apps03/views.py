@@ -9,7 +9,18 @@ import mysql.connector
 
 def login(request):
     myresult = "Harry Musyoka"
-    
+    mydb = mysql.connector.connect(
+    host="db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com",
+    user="doadmin",
+    password="AVNS_opSyNyIDAt49SbpzqG_",
+    database="dbapps03b"
+    )
+    mycursor = mydb.cursor()
+ 
+    mycursor.execute("Show tables;")
+ 
+    myresult = mycursor.fetchall()
+
     return render (request,'apps03/dispmsg.html', {
        'messages': myresult
        })
