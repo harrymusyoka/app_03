@@ -7,7 +7,7 @@ urlpatterns = [
     path('apps03/checkins_list/', views.checkins_list),
     path('apps03/checkinsadd/', views.checkinsadd, name='checkinsadd'),
     path('apps03/view_booking/', views.view_booking),
-    path('apps03/checkinsaddpr/', views.checkinsaddpr, name='checkinsaddpr'),
+    path('checkinsaddpr/', views.checkinsaddpr, name='checkinsaddpr'),
     path('apps03/mysqlfunc/', views.mysqlfunc, name='mysqlfunc'),
 ]
  
