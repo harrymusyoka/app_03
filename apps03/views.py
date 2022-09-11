@@ -3,8 +3,8 @@ from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
 from django.contrib import messages
-from apps03.models import  bookings, chk
-from apps03.forms import  bookingsForm,chkForm
+from apps03.models import  bookings, dbapps03b.apps03_chk
+from apps03.forms import  bookingsForm,dbapps03b.apps03_chkForm
 
 
 
@@ -74,10 +74,10 @@ def checkinsaddpr(request):
         occ0=request.POST['mark']
         days0=request.POST['days']
         rate0=request.POST['rate']
-        checkins0=chk.objects.create(seq=seq0,rm=rm0,mark=occ0,days=days0, rate= rate0)      
+        checkins0=dbapps03b.apps03_chk.objects.create(seq=seq0,rm=rm0,mark=occ0,days=days0, rate= rate0)      
         checkins0.save()  
   
-        checkinss = chk.objects.all() # Collect all records from table   
+        checkinss =dbapps03b.apps03_chk.objects.all() # Collect all records from table   
         return render (request,'apps03/checkinslist.html', {
         'checkinss': checkinss
     })
