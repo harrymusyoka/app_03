@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.contrib import messages
 from apps03.models import  bookings, chk
 from apps03.forms import  bookingsForm,chkForm
-#import mysql.connector
+
 
 
 
@@ -18,46 +18,6 @@ def login(request):
 
 
 
-
-
-def login4(request):
-    myresult = "Harry Musyoka"
-    mydb = mysql.connector.connect(
-    host="db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com",
-    user="doadmin",
-    password="AVNS_opSyNyIDAt49SbpzqG_",
-    database="dbapps03b"
-    )
-    mycursor = mydb.cursor()
- 
-    mycursor.execute("SELECT table_name FROM information_schema.tables;")
- 
-    myresult = mycursor.fetchall()
-
-    return render (request,'apps03/dispmsg.html', {
-       'messages': myresult
-       })
-
-
-
-def login3(request):
-    mydb = mysql.connector.connect(
-    host="db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com",
-    user="doadmin",
-    password="AVNS_opSyNyIDAt49SbpzqG_",
-    database="dbapps03b"
-    )
-    mycursor = mydb.cursor()
- 
-    mycursor.execute("Show tables;")
- 
-    myresult = mycursor.fetchall()
- 
-    #for x in myresult:
-     #   print(x)
-
-    return render (request,'apps03/checkinslist.html', {
-       'checkinss': myresult})
 
 
         
