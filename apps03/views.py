@@ -5,6 +5,25 @@ from django.http import HttpResponse
 from django.contrib import messages
 from apps03.models import  bookings
 from apps03.forms import  bookingsForm
+import mysql.connector
+
+
+
+def mysqlfunc(request):
+    mydb = mysql.connector.connect(
+    host="db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com",
+    user="doadmin",
+    password="AVNS_opSyNyIDAt49SbpzqG_",
+    database="dbapps03b"
+    )
+    mycursor = mydb.cursor()
+ 
+    mycursor.execute("Show tables;")
+ 
+    myresult = mycursor.fetchall()
+ 
+    for x in myresult:
+        print(x)
 
 
 def   login(request):
