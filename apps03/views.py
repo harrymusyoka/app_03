@@ -10,8 +10,8 @@ import mysql.connector
 def login(request):
     myresult = "Harry Musyoka"
     
-    return render (request,'apps03/checkinslist.html', {
-       'checkinss': myresult
+    return render (request,'apps03/dispmsg.html', {
+       'messages': myresult
        })
 
 
