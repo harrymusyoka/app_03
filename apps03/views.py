@@ -36,15 +36,15 @@ def   login(request):
       #sql = "DROP TABLE rentalunit"
       #mycursor.execute(sql) 
       a = "Hello"
-   
-      checkinss = bookings.objects.all() # Collect all records from table 
+      mysqlfunc()
+     # checkinss = bookings.objects.all() # Collect all records from table 
      
     
-      count = bookings.objects.all().count()
-      print(count)
-      return render (request,'apps03/checkinslist.html', {
-        'checkinss': checkinss
-      })
+     # count = bookings.objects.all().count()
+   #   print(count)
+   #   return render (request,'apps03/checkinslist.html', {
+    #    'checkinss': checkinss
+  #    })
 
      
 def year_archive(request, year):
