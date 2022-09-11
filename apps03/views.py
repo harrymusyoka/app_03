@@ -57,8 +57,7 @@ def login3(request):
      #   print(x)
 
     return render (request,'apps03/checkinslist.html', {
-       'checkinss': myresult
-       })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
+       'checkinss': myresult})
 
 
         
