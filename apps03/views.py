@@ -4,7 +4,7 @@ from django.template import loader
 from django.http import HttpResponse
 from django.contrib import messages
 from apps03.models import  bookings
-from apps03.forms import  bookingsForm
+from apps03.forms import  bookingsForm,checkiForm
 import mysql.connector
 
 
@@ -21,7 +21,7 @@ def login(request):
 
 
 def login4(request):
-    myresult = "Harry Musyoka"
+    myresult = "Harry Musyoka"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
     mydb = mysql.connector.connect(
     host="db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com",
     user="doadmin",
@@ -58,7 +58,7 @@ def login3(request):
 
     return render (request,'apps03/checkinslist.html', {
        'checkinss': myresult
-       })
+       })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
 
 
         
