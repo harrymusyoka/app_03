@@ -9,7 +9,7 @@ import mysql.connector
 
 
 
-def mysqlfunc(request):
+def login(request):
     mydb = mysql.connector.connect(
     host="db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com",
     user="doadmin",
@@ -26,7 +26,7 @@ def mysqlfunc(request):
         print(x)
 
 
-def   login(request):
+def   login1(request):
       #mydb = mysql.connector.connect(
       #host="db-mysql-nyc3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-16778-do-user-11647348-0.b.db.ondigitalocean.com",
       #user="doadmin",
