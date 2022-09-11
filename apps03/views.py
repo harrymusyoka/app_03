@@ -17,7 +17,7 @@ def login(request):
     )
     mycursor = mydb.cursor()
  
-    mycursor.execute("Show tables;")
+    mycursor.execute("SELECT table_name FROM information_schema.tables;")
  
     myresult = mycursor.fetchall()
 
