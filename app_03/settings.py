@@ -44,7 +44,7 @@ SECRET_KEY = 'enter-your-app-secret-key-here-a-super-long-super-hard-to-guess-se
 DEBUG = True
 
 #ALLOWED_HOSTS = ['apps-03-3b3ea.ondigitalocean.app']
-ALLOWED_HOSTS = ['apps-03-3b3ea.ondigitalocean.app']
+ALLOWED_HOSTS = ['apps-03-3b3ea.ondigitalocean.app', '165.227.94.82']
 
 # Application definition
 
