@@ -122,11 +122,11 @@ DATABASES = {
      #   'HOST'    : 'apps-03-3b3ea.ondigitalocean.app',                
    #     'PORT'    : '3306',
          'ENGINE'  : 'django.db.backends.mysql', # <-- UPDATED line 
-         'NAME'    : 'dbapps03',                 # <-- UPDATED line 
-         'USER'    : 'root',                     # <-- UPDATED line
-         'PASSWORD': 'cb922b4483e621acae09b90fd387be71906c26c360d01c32',              # <-- UPDATED
-         'HOST'    : '165.227.94.82',         
-         'PORT'    : '3306',
+         'NAME'    : 'defaultdb',                 # <-- UPDATED line 
+         'USER'    : 'doadmin',                     # <-- UPDATED line
+         'PASSWORD': 'AVNS_opSyNyIDAt49SbpzqG_',              # <-- UPDATED
+         'HOST'    : 'db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com',         
+         'PORT'    : '25060',
 
         
         
