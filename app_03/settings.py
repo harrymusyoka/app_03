@@ -20,7 +20,7 @@ import dj_database_url
 
 
 
-MESSAGE_TAGS = {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
+MESSAGE_TAGS = {
     messages.DEBUG: 'alert-info',
     messages.INFO: 'alert-info',
     messages.SUCCESS: 'alert-success',
