@@ -11,8 +11,8 @@ from apps03.forms import  bookingsForm,chkForm
 
 def login(request):
      
-  var mysql      = require('mysql');
-  var connection = mysql.createConnection({
+  mysql      = require('mysql');
+  connection = mysql.createConnection({
   host     : 'db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com',
   user     : 'doadmin',
   password : 'AVNS_opSyNyIDAt49SbpzqG'
