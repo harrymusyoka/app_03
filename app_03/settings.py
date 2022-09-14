@@ -43,8 +43,8 @@ SECRET_KEY = 'enter-your-app-secret-key-here-a-super-long-super-hard-to-guess-se
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#ALLOWED_HOSTS = ['apps-03-3b3ea.ondigitalocean.app']
-ALLOWED_HOSTS = ['apps-03-3b3ea.ondigitalocean.app', '165.227.94.82']
+ALLOWED_HOSTS = ['']
+#ALLOWED_HOSTS = ['apps-03-3b3ea.ondigitalocean.app', '165.227.94.82']
 
 # Application definition
 
@@ -115,25 +115,39 @@ DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
 DATABASES = {
     'default': {
+        'ENGINE'  : 'django.db.backends.mysql', # <-- UPDATED line 
+        'NAME'    : 'dbaccom0',                 # <-- UPDATED line 
+        'USER'    : 'root',                     # <-- UPDATED line
+        'PASSWORD': 'mysql2016',              # <-- UPDATED line
+        'HOST'    : 'localhost',                # <-- UPDATED line
+        'PORT'    : '3306',
+    }
+}
+
+
+
+
+#DATABASES = {
+ #   'default': {
   #      'ENGINE'  : 'django.db.backends.mysql', # <-- UPDATED line 
    #     'NAME'    : 'dbapps03',                 # <-- UPDATED line 
    #     'USER'    : 'root@droplet-01',                     # <-- UPDATED line
   #      'PASSWORD': '',              # <-- UPDATED line
      #   'HOST'    : 'apps-03-3b3ea.ondigitalocean.app',                
    #     'PORT'    : '3306',
-         'ENGINE'  : 'django.db.backends.mysql', # <-- UPDATED line 
-         'NAME'    : 'defaultdb',                 # <-- UPDATED line 
-         'USER'    : 'doadmin',                     # <-- UPDATED line
-         'PASSWORD': 'AVNS_opSyNyIDAt49SbpzqG_',              # <-- UPDATED
-         'HOST'    : 'db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com',         
-         'PORT'    : '25060',
+    #     'ENGINE'  : 'django.db.backends.mysql', # <-- UPDATED line 
+    #     'NAME'    : 'defaultdb',                 # <-- UPDATED line 
+     #    'USER'    : 'doadmin',                     # <-- UPDATED line
+     #    'PASSWORD': 'AVNS_opSyNyIDAt49SbpzqG_',              # <-- UPDATED
+     #   'HOST'    : 'db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com',         
+    #     'PORT'    : '25060',
 
         
         
         
         
-    }
-}
+  #  }
+#}
 
 
 
