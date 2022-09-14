@@ -16,14 +16,13 @@ def login(request):
   host     : 'db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com',
   user     : 'doadmin',
   password : 'AVNS_opSyNyIDAt49SbpzqG'
-       });
+   });
 
   connection.connect(function(err) {
   if (err) {
     console.error('error connecting: ' + err.stack);
     return;
   }
-
   console.log('connected as id ' + connection.threadId); });
      
     #  template = loader.get_template('apps03/mysqtemp.html')
