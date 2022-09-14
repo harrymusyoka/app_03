@@ -56,7 +56,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps03',
-    
+    'apps-03-3b3ea.ondigitalocean.app'
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
