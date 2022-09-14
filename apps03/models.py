@@ -1,7 +1,8 @@
-from django.db import models
 from django.db.models import (Model, ForeignKey, PositiveSmallIntegerField,
         DecimalField, CharField, IntegerField, TextField, DateField, DateTimeField)
 
+from django.db.models import Q
+from django.db import models, router, connections
 
 
 class Reporter(models.Model):
@@ -9,6 +10,8 @@ class Reporter(models.Model):
 
     def __str__(self):
         return self.full_name
+from django.db.models import Q
+from django.db import models, router, connections
 
 class Article(models.Model):
     pub_date = models.DateField()
