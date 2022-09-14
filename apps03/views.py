@@ -23,8 +23,15 @@ def login(request):
     console.error('error connecting: ' + err.stack);
     return;
   }
-  console.log('connected as id ' + connection.threadId); });
-     
+
+  console.log('connected as id ' + connection.threadId);
+   });
+ 
+ 
+ 
+ 
+ 
+      
     #  template = loader.get_template('apps03/mysqtemp.html')
      # return HttpResponse(template.render())
     form = chkForm()
