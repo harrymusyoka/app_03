@@ -8,9 +8,9 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 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
 For the full list of settings and their values, see
 https://docs.djangoprimport dj_database_url
-oject.com/en/4.1/ref/settihttps://cloud.digitalocean.com/droplets/315231183/ngs/
+oject.com/en/4.1/ref/settiht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tps://cloud.digitalocean.com/droplets/315231183/ngs/
 """
-'apps-03-3b3ea.ondigitalocean.app'
+
 
 from pathlib import Path
 from django.contrib.messages import constants as messages
@@ -20,7 +20,7 @@ import dj_database_url
 
 
 
-MESSAGE_TAGS = {
+MESSAGE_TAGS = {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
     messages.DEBUG: 'alert-info',
     messages.INFO: 'alert-info',
     messages.SUCCESS: 'alert-success',
@@ -55,7 +55,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'apps-03-3b3ea.ondigitalocean.app',
 ]
 
