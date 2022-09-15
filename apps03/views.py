@@ -23,7 +23,7 @@ def login(request):
   user: "doadmin",
   port: 25060,
   password: "AVNS_opSyNyIDAt49SbpzqG_",
-  database: "dbapps03,
+  database: "dbapps03",
   ssl: {
     ca: fs.readFileSync(__dirname + '/public/ca-certificate.crt.txt'),
     rejectUnauthorized: false
