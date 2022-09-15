@@ -30,8 +30,9 @@ def login(request):
     }
   });
 
-  app.post('/', function (req, res) {
-  con.connect(function (err) {
+ 
+
+  app.post('/', function (req, res) {con.connect(function (err) {
     if (err) throw err;
     con.end();
     res.send("Connected!");
