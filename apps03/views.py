@@ -35,7 +35,7 @@ def login(request):
     if (err) throw err;
     con.end();
     res.send("Connected!");
-    });
+    }});
      
           
     #  template = loader.get_template('apps03/mysqtemp.html')
