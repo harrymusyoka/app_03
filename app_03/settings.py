@@ -43,7 +43,7 @@ SECRET_KEY = 'enter-your-app-secret-key-here-a-super-long-super-hard-to-guess-se
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['apps-03-3b3ea.ondigitalocean.app']
+ALLOWED_HOSTS = ['apps-03-3b3ea.ondigitalocean.app', '127.0.0.1'1
 #ALLOWED_HOSTS = ['apps-03-3b3ea.ondigitalocean.app', '165.227.94.82']
 
 # Application definition
@@ -119,7 +119,7 @@ DATABASES = {
         'NAME'    : 'dbapps03',                 # <-- UPDATED line 
         'USER'    : 'root',                     # <-- UPDATED line
         'PASSWORD': '',              # <-- UPDATED line
-        'HOST'    : 'localhost',                # <-- UPDATED line
+        'HOST'    : '127.0.0.1',                # <-- UPDATED line
         'PORT'    : '3306',
     }
 }
