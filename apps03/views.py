@@ -11,26 +11,31 @@ import mysql.connector
 
 
 def login(request):
-     
+    # 'NAME'    : 'dbapps03',                 # <-- UPDATED line 
+     #   'USER'    : 'doadmin',                     # <-- UPDATED line
+     #   'PASSWORD': 'AVNS_opSyNyIDAt49SbpzqG_',              # <-- UPDATED line
+     #   'HOST'    : 'db-mysql-nyc3-16778-duser-11647348-0.b.db.ondigitalocean.com',                
+    #    'PORT'    : '25060',
+ 
      
   con = mysql.createConnection({
-  host: "****",
-  user: "****",
-  port: ****,
-  password: "****",
-  database: "****",
+  host: "db-mysql-nyc3-16778-duser-11647348-0.b.db.ondigitalocean.com",
+  user: "doadmin",
+  port: 25060,
+  password: "AVNS_opSyNyIDAt49SbpzqG_",
+  database: "dbapps03,
   ssl: {
     ca: fs.readFileSync(__dirname + '/public/ca-certificate.crt.txt'),
     rejectUnauthorized: false
     }
   });
 
-app.post('/', function (req, res) {
+  app.post('/', function (req, res) {
   con.connect(function (err) {
     if (err) throw err;
     con.end();
     res.send("Connected!");
-  });
+    });
      
           
     #  template = loader.get_template('apps03/mysqtemp.html')

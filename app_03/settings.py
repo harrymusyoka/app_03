@@ -117,9 +117,9 @@ DATABASES = {
     'default': {
         'ENGINE'  : 'django.db.backends.mysql', # <-- UPDATED line 
         'NAME'    : 'dbapps03',                 # <-- UPDATED line 
-        'USER'    : 'AVNS_opSyNyIDAt49SbpzqG_',                     # <-- UPDATED line
-        'PASSWORD': '',              # <-- UPDATED line
-        'HOST'    : 'db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com',                # <-- UPDATED line
+        'USER'    : 'doadmin',                     # <-- UPDATED line
+        'PASSWORD': 'AVNS_opSyNyIDAt49SbpzqG_',              # <-- UPDATED line
+        'HOST'    : 'db-mysql-nyc3-16778-duser-11647348-0.b.db.ondigitalocean.com',                
         'PORT'    : '25060',
     }
 }
