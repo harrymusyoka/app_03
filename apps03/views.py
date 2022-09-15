@@ -5,16 +5,38 @@ from django.http import HttpResponse
 from django.contrib import messages
 from apps03.models import  bookings, chk
 from apps03.forms import  bookingsForm,chkForm
-
+from django.db import models, router, connections
+import mysql.connector
 
 
 
 def login(request):
+     
+     
+  const con = mysql.createConnection({
+  host: "****",
+  user: "****",
+  port: ****,
+  password: "****",
+  database: "****",
+  ssl: {
+    ca: fs.readFileSync(__dirname + '/public/ca-certificate.crt.txt'),
+    rejectUnauthorized: false
+    }
+  });
+
+app.post('/', function (req, res) {
+  con.connect(function (err) {
+    if (err) throw err;
+    con.end();
+    res.send("Connected!");
+  });
+     
           
     #  template = loader.get_template('apps03/mysqtemp.html')
      # return HttpResponse(template.render())
-    form = chkForm()
-    return render(request, 'apps03/add_checkins.html',{'form': form})
+  ##  form = chkForm()
+  ##  return render(request, 'apps03/add_checkins.html',{'form': form})
 
 
 
