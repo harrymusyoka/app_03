@@ -13,7 +13,7 @@ import mysql.connector
 def login(request):
      
      
-  const con = mysql.createConnection({
+  con = mysql.createConnection({
   host: "****",
   user: "****",
   port: ****,
