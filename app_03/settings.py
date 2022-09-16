@@ -122,10 +122,10 @@ DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
  #       'HOST'    : 'db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com',                
  #       'PORT'    : '25060',
   #  }
-}
+#}
 
 
-[label django_app/settings.py]
+
 if DEVELOPMENT_MODE is True:
     DATABASES = {
         "default": {
