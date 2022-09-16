@@ -113,19 +113,32 @@ DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 # }
 #}
 
-DATABASES = {
-    'default': {
-        'ENGINE'  : 'django.db.backends.mysql', # <-- UPDATED line 
-        'NAME'    : 'dbapps03',                 # <-- UPDATED line 
-        'USER'    : 'doadmin',                     # <-- UPDATED line
-        'PASSWORD': 'AVNS_opSyNyIDAt49SbpzqG_',              # <-- UPDATED line
-        'HOST'    : 'db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com',                
-        'PORT'    : '25060',
-    }
+#DATABASES = {
+#    'default': {
+#        'ENGINE'  : 'django.db.backends.mysql', # <-- UPDATED line 
+#        'NAME'    : 'dbapps03',                 # <-- UPDATED line 
+#        'USER'    : 'doadmin',                     # <-- UPDATED line
+ #       'PASSWORD': 'AVNS_opSyNyIDAt49SbpzqG_',              # <-- UPDATED line
+ #       'HOST'    : 'db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com',                
+ #       'PORT'    : '25060',
+  #  }
 }
 
 
-
+[label django_app/settings.py]
+if DEVELOPMENT_MODE is True:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        }
+    }
+elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
+    if os.getenv("DATABASE_URL", None) is None:
+        raise Exception("DATABASE_URL environment variable not defined")
+    DATABASES = {
+        "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
+    }
 
 #DATABASES = {
  #   'default': {
