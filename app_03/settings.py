@@ -10,14 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoprimport dj_database_url
 oject.com/en/4.1/ref/settiht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tps://cloud.digitalocean.com/droplets/315231183/ngs/
 """
-
-
 from pathlib import Path
 from django.contrib.messages import constants as messages
 import os
 import sys
-import dj_database_url
-
+import dj_database_urlDEBUG = os.getenv("DEBUG", "False") == "True"
+from django.core.management.utils import get_random_secret_key
 
 
 MESSAGE_TAGS = {
@@ -33,6 +31,7 @@ MESSAGE_TAGS = {
 # Build paths inside th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e project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+ 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -41,11 +40,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'enter-your-app-secret-key-here-a-super-long-super-hard-to-guess-secret-key'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['apps-03-3b3ea.ondigitalocean.app', '127.0.0.1']
+ 
+DEBUG = os.getenv("DEBUG", "False") == "True"
+#ALLOWED_HOSTS = ['apps-03-3b3ea.ondigitalocean.app', '127.0.0.1']
 #ALLOWED_HOSTS = ['apps-03-3b3ea.ondigitalocean.app', '165.227.94.82']
-
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 # Application definition
 
 INSTALLED_APPS = [
@@ -122,7 +121,7 @@ DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
  #       'HOST'    : 'db-mysql-nyc3-16778-do-user-11647348-0.b.db.ondigitalocean.com',                
  #       'PORT'    : '25060',
   #  }
-#}
+#}  "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
 
 
 
@@ -139,7 +138,7 @@ elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
     DATABASES = {
         "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
     }
-
+#NAME': os.path.join(PROJECT_DIR, 'yourdatabasename.db'),
 #DATABASES = {
  #   'default': {
   #      'ENGINE'  : 'django.db.backends.mysql', # <-- UPDATED line 
@@ -200,9 +199,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+
+
+STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 CSS_LOCATION = os.path.join(BASE_DIR,'static')
 
